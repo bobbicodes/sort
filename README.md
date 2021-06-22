@@ -4,7 +4,7 @@
 
 For a job interview take-home test I was asked to implement [Dijkstra's algorithm](https://github.com/porkostomus/dijkstra-cljs). "Haha, cool," I thought, but then realized that I had a problem.
 
-Like any good Clojurist, I had *already seen* that one solved plenty of ways, and this caused me to totally overthink it how I could somehow put my own spin on it, to the point where I got burnt out and never even completed the assignment.
+Like any good Clojurist, I had *already seen* that one solved plenty of ways, and this caused me to totally overthink how I could possibly put my own spin on it, to the point where I got burnt out and never even completed the assignment.
 
 But it got me thinking.
 
