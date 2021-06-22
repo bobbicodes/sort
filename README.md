@@ -18,7 +18,7 @@ For example, here is the essence of selection sort:
   (swap! elements #(remove-nth % idx)))
 ```
 
-Much like our reactive frontend libraries have us model our app data using a central data store and compute the views from this data, we store our data to be operated on in a global atom and then write functions that derive the necessary facts from it to compute the next step. I find this to be a very clear and fresh way to learn.
+Much like our reactive frontend libraries have us model our app state using a central data store and compute the views from this data, we store our data to be operated on in a global atom and then write functions that derive the necessary facts from it to compute the next step. I find this highly refreshing.
 
 
 ### Development mode
