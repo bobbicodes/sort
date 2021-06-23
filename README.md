@@ -1,5 +1,7 @@
 # porkostomus/sort
 
+![Sorting visualization](sort.png)
+
 ## Inspiration
 
 For a job interview take-home test I was asked to implement [Dijkstra's algorithm](https://github.com/porkostomus/dijkstra-cljs). "Haha, cool," I thought, but then realized that I had a problem.
