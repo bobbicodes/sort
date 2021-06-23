@@ -4,9 +4,9 @@
 
 For a job interview take-home test I was asked to implement [Dijkstra's algorithm](https://github.com/porkostomus/dijkstra-cljs). "Haha, cool," I thought, but then realized that I had a problem.
 
-Like any good Clojurist, I had *already seen* that one solved plenty of ways, and this caused me to totally overthink how I could possibly put my own spin on it, to the point where I got burnt out and never even completed the assignment.
+Like any good Clojurist, I had *already seen* that one solved plenty of ways, so the challenge therefore became how to make it look like I hadn't seen the answer and instead find a way to explore the problem in my own way.
 
-But it got me thinking.
+I never actually completed the assignment. But it got me thinking.
 
 Most algorithms in Clojure are written very elegantly, often in a functional style which is very clever but can sometimes obscure the essence of what it is doing. Following this practice is very beneficial for just about every reason, *except* for gaining intuition about the algorithm! And after all, why else would I be implementing a classic algorithm in Clojure if not to showcase the way it works? So, I found that by modeling the algorithm *statefully* (yes, the opposite of what we normally try to do), it allowed me to focus on a single iteration at a time, visualizing each step without getting confused by the outer looping machinery or reducing operation. How about that?
 
