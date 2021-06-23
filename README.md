@@ -20,6 +20,7 @@ For example, here is the essence of selection sort:
 
 Much like our reactive frontend libraries have us model our app state using a central data store and compute the views from this data, we store our data to be operated on in a global atom and then write functions that derive the necessary facts from it to compute the next step. I find this highly refreshing.
 
+The visualization was inspired by the animation on the [Insertion sort Wikipedia page](https://en.wikipedia.org/wiki/Insertion_sort). I plan on going through the rest of [The Algorithm Design Manual](https://www.algorist.com/) and making similar toys to prove that I understand them.
 
 ### Development mode
 ```
