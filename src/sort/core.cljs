@@ -1,7 +1,8 @@
 (ns sort.core
     (:require
-      [reagent.core :as r]
-      [reagent.dom :as d]))
+     [reagent.core :as r]
+     [reagent.dom :as d]
+     [sort.audio :refer [*context*]]))
 
 ;; -------------------------
 ;; Views
@@ -132,6 +133,8 @@
       [:button
        {:on-click
         (fn play-click [e]
+          (if (= (.-state *context*) "suspended")
+            (.resume *context*))
           (start-timer!)
           (reset! status "started"))}
        "Play"]

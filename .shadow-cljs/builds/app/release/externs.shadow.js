@@ -1,4 +1,5 @@
-
+/** @const {ShadowJS} */ var clearInterval;
+/** @const {ShadowJS} */ var setInterval;
 ShadowJS.prototype.$$typeof;
 ShadowJS.prototype.Alt;
 ShadowJS.prototype.Apps;

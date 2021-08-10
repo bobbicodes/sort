@@ -14,4 +14,4 @@ pom.xml.asc
 /.repl
 *.log
 /.env
-.shadow-cljs
+.shadow-cljs/socket-repl.port
