@@ -1,3 +1,4 @@
+/** @const {ShadowJS} */ var AudioContext;
 /** @const {ShadowJS} */ var clearInterval;
 /** @const {ShadowJS} */ var setInterval;
 ShadowJS.prototype.$$typeof;

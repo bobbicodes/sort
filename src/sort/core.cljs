@@ -1,8 +1,8 @@
 (ns sort.core
-    (:require
-     [reagent.core :as r]
-     [reagent.dom :as d]
-     [sort.audio :as audio :refer [*context*]]))
+  (:require
+   [reagent.core :as r]
+   [reagent.dom :as d]
+   [sort.audio :as audio :refer [*context*]]))
 
 ;; -------------------------
 ;; Views
@@ -66,41 +66,47 @@
           (= @algo "Insertion sort")
           [bars (into (vec  @sorted) @elements)])]])
 
+(def timer-id (atom 0))
+
+(def timer (atom :off))
+
+(defn stop-timer! [id]
+  (js/clearInterval id)
+  (reset! timer :off))
+
+(seq @elements)
+
 (defn insert! []
   (let [lesser-items (vec (take-while #(< % (first @elements)) @sorted))]
-    (when (seq @elements)
-      (audio/play-note (first @elements))
-      (reset! sorted (into
-                      (conj
-                       lesser-items
-                       (first @elements))
-                      (vec (drop (count lesser-items)
-                                 @sorted))))
-      (swap! elements #(vec (rest %))))))
+    (if (seq @elements)
+      (do (audio/play-note (first @elements))
+          (reset! sorted (into
+                          (conj
+                           lesser-items
+                           (first @elements))
+                          (vec (drop (count lesser-items)
+                                     @sorted))))
+          (swap! elements #(vec (rest %))))
+      (stop-timer! @timer-id))))
 
 (defn select! []
   (let [min-val (apply min-key second (map-indexed vector @elements))
         val (last min-val)
         idx (first min-val)]
-    (when (seq @elements)
-      (audio/play-note val)
-      (swap! sorted conj val)
-      (swap! elements #(remove-nth % idx)))))
-
-(def timer-id (r/atom 0))
-
-(def timer (r/atom :off))
+    (if (seq @elements)
+      (do
+        (audio/play-note val)
+        (swap! sorted conj val)
+        (swap! elements #(remove-nth % idx)))
+      (stop-timer! @timer-id))))
 
 (defn start-timer! []
   (when (= @timer :off)
-    (reset! timer-id (js/setInterval #(cond 
+    (reset! timer-id (js/setInterval #(cond
                                         (= @algo "Selection sort") (select!)
-                                        (= @algo "Insertion sort") (insert!)) 
+                                        (= @algo "Insertion sort") (insert!))
                                      300))
     (reset! timer :on)))
-
-(defn stop-timer! [timer]
-  (js/clearInterval timer))
 
 (defn home-page []
   (let [lesser-items (vec (take-while #(< % (first @elements)) @sorted))
@@ -140,8 +146,7 @@
       [:button
        {:on-click
         (fn stop-click [e]
-          (stop-timer! @timer-id)
-          (reset! timer :off))}
+          (stop-timer! @timer-id))}
        "Stop"]]
      [render-sort]
      [:p (str "Elements: " @elements)]

@@ -4,16 +4,19 @@ _meta:wa
 _next:Za
 _rest:Nb
 _seq:rb
+add_BANG_:kd
 afn:l
 afterRender:Eb
 arr:i
 auto_run:xa
 beforeFlush:xc
 bitmap:N
+blockable:td
 buf:Ob
 buffer_:$a
 captured:Pb
 caught:Qb
+cb:ud
 chunk:W
 chunk_next:ya
 cljs$core$APersistentVector$:Rb
@@ -117,6 +120,12 @@ cljs$core$IWatchable$_notify_watches$arity$3:Yb
 cljs$core$IWatchable$_remove_watch$arity$2:Hb
 cljs$core$IWithMeta$_with_meta$arity$2:X
 cljs$core$IWriter$_write$arity$2:mc
+cljs$core$async$impl$protocols$Buffer$add_BANG__STAR_$arity$2:vd
+cljs$core$async$impl$protocols$Channel$close_BANG_$arity$1:nd
+cljs$core$async$impl$protocols$Handler$active_QMARK_$arity$1:wd
+cljs$core$async$impl$protocols$Handler$blockable_QMARK_$arity$1:rd
+cljs$core$async$impl$protocols$Handler$commit$arity$1:xd
+cljs$core$async$impl$protocols$WritePort$put_BANG_$arity$3:sd
 cljs$lang$applyTo:J
 cljs$lang$ctorPrWriter:Zb
 cljs$lang$ctorStr:ob
@@ -137,6 +146,8 @@ collision_hash:Pa
 componentQueue:Kb
 custom:Oc
 dirty_QMARK_:Va
+dirty_puts:pd
+dirty_takes:qd
 edit:M
 editable_QMARK_:pb
 ensure_editable:cb
@@ -144,6 +155,7 @@ fn:wb
 fn_to_element:pc
 forceChunk:xb
 fqn:pa
+handler:od
 hasNext:ea
 has_nil_QMARK_:ka
 hash_map:Qa
@@ -160,6 +172,9 @@ kv_reduce:Bb
 len:eb
 meta33024:Pc
 meta34623:Qc
+meta39683:yd
+meta39686:zd
+meta39791:Ad
 more:ta
 mseq:F
 next_entry:Cb
@@ -174,6 +189,7 @@ on_dispose_arr:hd
 on_set:Rc
 opts:Sc
 parse_fn:Lb
+puts:ld
 reagent$impl$protocols$Compiler$as_element$arity$2:sc
 reagent$impl$protocols$Compiler$get_id$arity$1:Tc
 reagent$impl$protocols$Compiler$make_element$arity$5:tc
@@ -189,6 +205,7 @@ sb:Vc
 scheduled_QMARK_:Mb
 seen:dc
 str:Ya
+takes:md
 transient_map:Sa
 unicode:jd
 v:ba
