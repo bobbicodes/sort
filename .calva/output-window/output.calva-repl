@@ -25,3 +25,7 @@ clj꞉shadow.user꞉>  ; Use `alt+enter` to evaluate
 ;    (There is a button in the status bar for this)
 ; Jack-in done.
 cljs꞉cljs.user꞉>  ; Use `alt+enter` to evaluate
+[]
+cljs꞉sort.core꞉> 
+#'sort.core/select!
+cljs꞉sort.core꞉> 

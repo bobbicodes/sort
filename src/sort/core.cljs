@@ -65,6 +65,42 @@
           (= @algo "Insertion sort")
           [bars (into (vec  @sorted) @elements)])]])
 
+(defn insert! []
+  (let [lesser-items (vec (take-while #(< % (first @elements)) @sorted))]
+    (when (seq @elements)
+      (reset! sorted (into
+                      (conj
+                       lesser-items
+                       (first @elements))
+                      (vec (drop (count lesser-items)
+                                 @sorted))))
+      (swap! elements #(vec (rest %))))))
+
+(defn select! []
+  (let [min-val (apply min-key second (map-indexed vector @elements))
+        val (last min-val)
+        idx (first min-val)]
+    (when (seq @elements)
+      (swap! sorted conj val)
+      (swap! elements #(remove-nth % idx)))))
+
+(def status (r/atom "not started"))
+
+(def timer-id (r/atom 0))
+
+(def timer (r/atom :off))
+
+(defn start-timer! []
+  (when (= @timer :off)
+    (reset! timer-id (js/setInterval #(cond 
+                                        (= @algo "Selection sort") (select!)
+                                        (= @algo "Insertion sort") (insert!)) 
+                                     300))
+    (reset! timer :on)))
+
+(defn stop-timer! [timer]
+  (js/clearInterval timer))
+
 (defn home-page []
   (let [lesser-items (vec (take-while #(< % (first @elements)) @sorted))
         min-val (apply min-key second (map-indexed vector @elements))
@@ -88,6 +124,23 @@
            [:p (str "Insertion sort works by taking the next element, " (first @elements)
                     " at index " (count @sorted)
                     ", and inserting it into its proper position in the sorted list which here is " (count lesser-items))])
+     [:div
+      [:button
+       {:on-click
+        #(select!)}
+       "Step"]
+      [:button
+       {:on-click
+        (fn play-click [e]
+          (start-timer!)
+          (reset! status "started"))}
+       "Play"]
+      [:button
+       {:on-click
+        (fn stop-click [e]
+          (stop-timer! @timer-id)
+          (reset! timer :off))}
+       "Stop"]]
      [render-sort]
      [:p (str "Elements: " @elements)]
      [:p (str "Sorted: " @sorted)]
@@ -96,20 +149,7 @@
            (= @algo "Insertion sort")
            [:p (str "Next element: " (first @elements)
                     " at index " (count @sorted)
-                    " belongs at position " (count lesser-items))])
-     (cond (= @algo "Selection sort")
-           [button "Swap!" (fn []
-                             (swap! sorted conj val)
-                             (swap! elements #(remove-nth % idx)))]
-           (= @algo "Insertion sort")
-           [button "Insert!" (fn []
-                               (reset! sorted (into
-                                               (conj
-                                                lesser-items
-                                                (first @elements))
-                                               (vec (drop (count lesser-items)
-                                                          @sorted))))
-                               (swap! elements #(vec (rest %))))])]))
+                    " belongs at position " (count lesser-items))])]))
 
 ;; -------------------------
 ;; Initialize app
