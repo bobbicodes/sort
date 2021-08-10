@@ -80,12 +80,14 @@
     (dec-rate (- 68 midi-num))))
 
 (defn play-note [pitch]
-  (let [audio-buffer  (:decoded-buffer (get samples 1))
+  (let [adjusted-pitch (if (< pitch 48) (+ pitch 48) pitch)
+        instrument (if (< pitch 48) 15 14)
+        audio-buffer  (:decoded-buffer (get samples instrument))
         sample-source (.createBufferSource *context*)]
     (set! (.-buffer sample-source) audio-buffer)
     (.setValueAtTime
      (.-playbackRate sample-source)
-     (pitch->rate pitch)
+     (pitch->rate adjusted-pitch)
      (.-currentTime *context*))
     (.connect sample-source (.-destination *context*))
     (.start sample-source)
@@ -100,4 +102,4 @@
 (.-currentTime *context*)
 (.createBufferSource *context*)
 (.-state *context*)
-(play-note 60)
+(play-note 90)

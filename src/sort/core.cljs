@@ -2,7 +2,7 @@
     (:require
      [reagent.core :as r]
      [reagent.dom :as d]
-     [sort.audio :refer [*context*]]))
+     [sort.audio :as audio :refer [*context*]]))
 
 ;; -------------------------
 ;; Views
@@ -56,7 +56,7 @@
   (into (vec (take n nums)) (drop (+ 1 n) nums)))
 
 (defn render-sort []
-  [:svg {:width    "90%"
+  [:svg {:width    "100%"
          :view-box (str "0 0 100 100")}
    [:g
     (rect 0 0 80 100)
@@ -69,6 +69,7 @@
 (defn insert! []
   (let [lesser-items (vec (take-while #(< % (first @elements)) @sorted))]
     (when (seq @elements)
+      (audio/play-note (first @elements))
       (reset! sorted (into
                       (conj
                        lesser-items
@@ -82,10 +83,9 @@
         val (last min-val)
         idx (first min-val)]
     (when (seq @elements)
+      (audio/play-note val)
       (swap! sorted conj val)
       (swap! elements #(remove-nth % idx)))))
-
-(def status (r/atom "not started"))
 
 (def timer-id (r/atom 0))
 
@@ -135,8 +135,7 @@
         (fn play-click [e]
           (if (= (.-state *context*) "suspended")
             (.resume *context*))
-          (start-timer!)
-          (reset! status "started"))}
+          (start-timer!))}
        "Play"]
       [:button
        {:on-click
