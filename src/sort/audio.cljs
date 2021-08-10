@@ -49,7 +49,7 @@
             sounds (range 1 19)]
     (if-not (nil? (first sounds))
       (let [sound (first sounds)
-            decoded-buffer (<! (get-and-decode {:url (str "./audio/" sound ".mp3")
+            decoded-buffer (<! (get-and-decode {:url (str "/sort/public/audio/" sound ".mp3")
                                                 :sound sound}))]
         (prn sound)
         (prn decoded-buffer)
@@ -102,14 +102,3 @@
     (.connect sample-source (.-destination *context*))
     (.start sample-source)
     sample-source))
-
-(if (= (.-state *context*) "suspended")
-  (.resume *context*))
-
-(.resume *context*)
-
-(get samples 1)
-(.-currentTime *context*)
-(.createBufferSource *context*)
-(.-state *context*)
-(play-note 72)

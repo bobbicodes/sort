@@ -40,7 +40,7 @@
      :stroke       "#00d0ff"
      :stroke-width 0.05}]])
 
-(defonce elements (r/atom (vec (repeatedly 20 #(rand-int 100)))))
+(defonce elements (r/atom (vec (repeatedly 96 #(rand-int 100)))))
 (defonce sorted (r/atom []))
 (defonce algo (r/atom "Selection sort"))
 
@@ -105,7 +105,7 @@
     (reset! timer-id (js/setInterval #(cond
                                         (= @algo "Selection sort") (select!)
                                         (= @algo "Insertion sort") (insert!))
-                                     300))
+                                     200))
     (reset! timer :on)))
 
 (defn home-page []
@@ -115,13 +115,29 @@
         idx (first min-val)]
     [:div#app
      [:div
-      [:h2 "Sorting algorithms"]
+      [:h2 "Musical Sorting"]
       [:select {:on-change #(reset! algo (.. % -target -value))}
        [:option {:value "Selection sort"} "Selection sort"]
        [:option {:value "Insertion sort"} "Insertion sort"]]
       [button "Reset" (fn []
-                        (reset! elements (vec (repeatedly 25 #(rand-int 100))))
+                        (reset! elements (vec (repeatedly 96 #(rand-int 100))))
                         (reset! sorted []))]]
+     [:div
+      [:button
+       {:on-click
+        (fn stop-click [e]
+          (stop-timer! @timer-id))}
+       "Stop"]
+      [:button
+       {:on-click
+        (fn play-click [e]
+          (if (= (.-state *context*) "suspended")
+            (.resume *context*))
+          (start-timer!))}
+       "Play"]]
+     [render-sort]
+     [:p (str "Elements: " @elements)]
+     [:p (str "Sorted: " @sorted)]
      (cond (= @algo "Selection sort")
            [:div
             [:p " Selection sort works by repeatedly finding the smallest element and moving it to the left."]
@@ -131,26 +147,6 @@
            [:p (str "Insertion sort works by taking the next element, " (first @elements)
                     " at index " (count @sorted)
                     ", and inserting it into its proper position in the sorted list which here is " (count lesser-items))])
-     [:div
-      [:button
-       {:on-click
-        #(select!)}
-       "Step"]
-      [:button
-       {:on-click
-        (fn play-click [e]
-          (if (= (.-state *context*) "suspended")
-            (.resume *context*))
-          (start-timer!))}
-       "Play"]
-      [:button
-       {:on-click
-        (fn stop-click [e]
-          (stop-timer! @timer-id))}
-       "Stop"]]
-     [render-sort]
-     [:p (str "Elements: " @elements)]
-     [:p (str "Sorted: " @sorted)]
      (cond (= @algo "Selection sort")
            [:p (str "Smallest element: " val " at index " idx)]
            (= @algo "Insertion sort")
