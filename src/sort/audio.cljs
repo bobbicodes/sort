@@ -49,7 +49,7 @@
             sounds (range 1 19)]
     (if-not (nil? (first sounds))
       (let [sound (first sounds)
-            decoded-buffer (<! (get-and-decode {:url (str "/sort/public/audio/" sound ".mp3")
+            decoded-buffer (<! (get-and-decode {:url (str "/audio/" sound ".mp3")
                                                 :sound sound}))]
         (prn sound)
         (prn decoded-buffer)
@@ -79,26 +79,37 @@
     (inc-rate (- midi-num 66))
     (dec-rate (- 68 midi-num))))
 
-(defn play-note [pitch]
-  (let [adjusted-pitch (cond (< 0 pitch 10) 60
-                             (< 11 pitch 20) 63
-                             (< 21 pitch 30) 65
-                             (< 31 pitch 40) 66
-                             (< 41 pitch 50) 67
-                             (< 51 pitch 60) 69
-                             (< 61 pitch 70) 67
-                             (< 71 pitch 80) 66
-                             (< 81 pitch 90) 67
-                             (< 91 pitch 99) 70
-                             :else 72)
-        instrument (if (< pitch 61) 15 14)
-        audio-buffer  (:decoded-buffer (get samples instrument))
-        sample-source (.createBufferSource *context*)]
-    (set! (.-buffer sample-source) audio-buffer)
-    (.setValueAtTime
-     (.-playbackRate sample-source)
-     (pitch->rate adjusted-pitch)
-     (.-currentTime *context*))
-    (.connect sample-source (.-destination *context*))
-    (.start sample-source)
-    sample-source))
+(defn play-note!
+  ([pitch]
+   (play-note! pitch (.-currentTime *context*)))
+  ([pitch time]
+   (let [adjusted-pitch (cond 
+                          (= 0 pitch) 56
+                          (= 1 pitch) 60
+                          (= 2 pitch) 62
+                          (= 3 pitch) 63
+                          (= 4 pitch) 64
+                          (= 5 pitch) 67
+                          (= 6 pitch) 69
+                              (<= 11 pitch 20) 56
+                              (<= 21 pitch 30) 60
+                              (<= 31 pitch 40) 62
+                              (<= 41 pitch 50) 63
+                              (<= 51 pitch 60) 64
+                              (<= 61 pitch 70) 67
+                              (<= 71 pitch 80) 69
+                              (<= 81 pitch 90) 72
+                              (<= 91 pitch 99) 74
+                              :else 76)
+         instrument (if (< pitch 61) 15 14)
+         audio-buffer  (:decoded-buffer (get samples instrument))
+         sample-source (.createBufferSource *context*)]
+     (set! (.-buffer sample-source) audio-buffer)
+     (.setValueAtTime
+      (.-playbackRate sample-source)
+      (pitch->rate adjusted-pitch)
+      time)
+     (.connect sample-source (.-destination *context*))
+     (.start sample-source time)
+     sample-source)))
+

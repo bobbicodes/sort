@@ -29,12 +29,12 @@
     :stroke       "black"
     :stroke-width 0.05}])
 
-(defn svg-bar [w h x y]
+(defn svg-bar [w h x y color]
   [:g
    [:rect
     {:width        w
      :height      h
-     :fill         "yellow"
+     :fill         color
      :x            x
      :y            y
      :stroke       "#00d0ff"
@@ -42,14 +42,22 @@
 
 (defonce elements (r/atom (vec (repeatedly 96 #(rand-int 100)))))
 (defonce sorted (r/atom []))
-(defonce algo (r/atom "Selection sort"))
+(defonce algo (r/atom "Insertion sort"))
+(defonce highlighted (r/atom nil))
 
 (defn bars [items]
   (let [bars items
-        bar-width (/ 80 (count bars))]
+        bar-width (/ 80 (count bars))
+        hl highlighted]
     (into [:g]
           (for [bar (range (count bars))]
-            (svg-bar bar-width (nth bars bar) (* bar bar-width) (- 100 (nth bars bar)))))))
+            (svg-bar bar-width 
+                 (nth bars bar) 
+                 (* bar bar-width) 
+                 (- 100 (nth bars bar))
+                 (if (= bar @hl)
+                   "red"
+                   "yellow"))))))
 
 (defn remove-nth
   [nums n]
@@ -74,20 +82,28 @@
   (js/clearInterval id)
   (reset! timer :off))
 
-(seq @elements)
+(defn sweep-notes! [notes]
+  (let [now (.-currentTime *context*)]
+    (doall (for [note (range (count notes))]
+             (do (reset! highlighted note)
+                 (audio/play-note! (get notes note) (+ now (/ note 50.0))))))))
 
 (defn insert! []
   (let [lesser-items (vec (take-while #(< % (first @elements)) @sorted))]
     (if (seq @elements)
-      (do (audio/play-note (first @elements))
-          (reset! sorted (into
-                          (conj
-                           lesser-items
-                           (first @elements))
-                          (vec (drop (count lesser-items)
-                                     @sorted))))
-          (swap! elements #(vec (rest %))))
-      (stop-timer! @timer-id))))
+      (do
+        (reset! highlighted (first @elements))
+        (audio/play-note! (first @elements))
+        (reset! sorted (into
+                        (conj
+                         lesser-items
+                         (first @elements))
+                        (vec (drop (count lesser-items)
+                                   @sorted))))
+        (swap! elements #(vec (rest %))))
+      (do
+        (stop-timer! @timer-id)
+        (sweep-notes! @sorted)))))
 
 (defn select! []
   (let [min-val (apply min-key second (map-indexed vector @elements))
@@ -95,10 +111,13 @@
         idx (first min-val)]
     (if (seq @elements)
       (do
-        (audio/play-note val)
+        (reset! highlighted val)
+        (audio/play-note! val)
         (swap! sorted conj val)
         (swap! elements #(remove-nth % idx)))
-      (stop-timer! @timer-id))))
+      (do
+        (stop-timer! @timer-id)
+        (sweep-notes! @sorted)))))
 
 (defn start-timer! []
   (when (= @timer :off)
@@ -117,8 +136,8 @@
      [:div
       [:h2 "Musical Sorting"]
       [:select {:on-change #(reset! algo (.. % -target -value))}
-       [:option {:value "Selection sort"} "Selection sort"]
-       [:option {:value "Insertion sort"} "Insertion sort"]]
+       [:option {:value "Insertion sort"} "Insertion sort"]
+       [:option {:value "Selection sort"} "Selection sort"]]
       [button "Reset" (fn []
                         (reset! elements (vec (repeatedly 96 #(rand-int 100))))
                         (reset! sorted []))]]

@@ -260,6 +260,7 @@ cljs$core$bounded_count:Sd
 cljs$core$build_subvec:ef
 cljs$core$char_escapes:tg
 cljs$core$chunk_append:Rd
+cljs$core$chunk_buffer:fk
 cljs$core$chunk_cons:Qd
 cljs$core$chunked_seq:We
 cljs$core$chunked_seq$cljs$0core$0IFn$0_invoke$0arity$04:Ve
@@ -290,6 +291,7 @@ cljs$core$deref:Fc
 cljs$core$disj:hd
 cljs$core$dissoc:bd
 cljs$core$do_assoc:Le
+cljs$core$doall$cljs$0core$0IFn$0_invoke$0arity$01:Nk
 cljs$core$drop$cljs$0core$0IFn$0_invoke$0arity$02:xe
 cljs$core$drop_last$cljs$0core$0IFn$0_invoke$0arity$02:ye
 cljs$core$edit_and_set$cljs$0core$0IFn$0_invoke$0arity$04:Af
@@ -507,7 +509,7 @@ clojure$string$replace:Th
 clojure$string$replace_all:Rh
 clojure$string$replace_with:Sh
 clojure$string$split$cljs$0core$0IFn$0_invoke$0arity$03:Vh
-cur$jscomp$inline_1465:Al
+cur$jscomp$inline_1486:Dl
 goog$UID_PROPERTY_:da
 goog$async$nextTick$getSetImmediateEmulator_:Qk
 goog$async$nextTick$setImmediate_:Pk
@@ -529,11 +531,11 @@ goog$typeOf:r
 goog$uidCounter_:ha
 module$node_modules$react$index:Qh
 module$node_modules$react_dom$index:Ij
-navigator$jscomp$inline_1119:Nk
-navigator$jscomp$inline_192:ek
-object$jscomp$inline_1461:yl
-part$jscomp$inline_1466:Bl
-parts$jscomp$inline_1464:zl
+navigator$jscomp$inline_1125:wl
+navigator$jscomp$inline_195:Ae
+object$jscomp$inline_1482:Bl
+part$jscomp$inline_1487:El
+parts$jscomp$inline_1485:Cl
 reagent:Wh
 reagent$dom$render$cljs$0core$0IFn$0_invoke$0arity$03:Lj
 reagent$dom$render_comp:Kj
@@ -634,13 +636,14 @@ sort$audio$decode:rl
 sort$audio$get_and_decode:sl
 sort$audio$load_samples:tl
 sort$audio$load_sound:ql
-sort$audio$play_note:wl
+sort$audio$play_note_BANG_$cljs$0core$0IFn$0_invoke$0arity$02:yl
 sort$audio$samples:ol
 sort$audio$sub_semitone:vl
 sort$core$algo:Qj
 sort$core$bars:Rj
 sort$core$button:Nj
 sort$core$elements:qe
+sort$core$highlighted:zl
 sort$core$home_page:Mj
 sort$core$insert_BANG_:Vj
 sort$core$render_sort:Sj
@@ -649,6 +652,7 @@ sort$core$sorted:Pj
 sort$core$start_timer_BANG_:ak
 sort$core$stop_timer_BANG_:xl
 sort$core$svg_bar:Oj
+sort$core$sweep_notes_BANG_:Al
 sort$core$timer:Zj
 sort$core$timer_id:Yj
-userAgent$jscomp$inline_193:fk
+userAgent$jscomp$inline_196:ek
