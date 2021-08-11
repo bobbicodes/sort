@@ -92,7 +92,7 @@
   (let [lesser-items (vec (take-while #(< % (first @elements)) @sorted))]
     (if (seq @elements)
       (do
-        (reset! highlighted (first @elements))
+        (reset! highlighted (count @sorted))
         (audio/play-note! (first @elements))
         (reset! sorted (into
                         (conj
@@ -111,7 +111,7 @@
         idx (first min-val)]
     (if (seq @elements)
       (do
-        (reset! highlighted val)
+        (reset! highlighted (+ idx (count @sorted)))
         (audio/play-note! val)
         (swap! sorted conj val)
         (swap! elements #(remove-nth % idx)))
