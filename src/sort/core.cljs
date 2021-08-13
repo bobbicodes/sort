@@ -40,7 +40,7 @@
      :stroke       "#00d0ff"
      :stroke-width 0.05}]])
 
-(defonce elements (r/atom (vec (repeatedly 96 #(rand-int 100)))))
+(defonce elements (r/atom (vec (repeatedly 300 #(rand-int 100)))))
 (defonce sorted (r/atom []))
 (defonce algo (r/atom "Insertion sort"))
 (defonce highlighted (r/atom nil))
@@ -89,7 +89,7 @@
   (let [now (.-currentTime *context*)]
     (doall (for [note (range (count notes))]
              (do (reset! highlighted note)
-                 (when (< note 20) 
+                 (when (< note 10) 
                    (audio/play-note! (get notes note) (+ now (/ note 30.0)))))))))
 
 (defn insert! []
@@ -144,8 +144,8 @@
 
 (defn start-timer! []
   (when (= @timer :off)
-    (reset! timer-id (cond (= @algo "Selection sort") (js/setInterval select! 100)
-                           (= @algo "Insertion sort") (js/setInterval insert! 100)
+    (reset! timer-id (cond (= @algo "Selection sort") (js/setInterval select! 150)
+                           (= @algo "Insertion sort") (js/setInterval insert! 150)
                            (= @algo "Bubble sort") (js/setInterval bubble! 4)))
     (reset! timer :on)))
 
