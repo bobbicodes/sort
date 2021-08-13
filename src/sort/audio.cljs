@@ -84,14 +84,14 @@
    (play-note! pitch (.-currentTime *context*)))
   ([pitch time]
    (let [adjusted-pitch (cond 
-                          (= 0 pitch) 56
+                          (= 0 pitch) 57
                           (= 1 pitch) 60
                           (= 2 pitch) 62
                           (= 3 pitch) 63
                           (= 4 pitch) 64
                           (= 5 pitch) 67
                           (= 6 pitch) 69
-                              (<= 11 pitch 20) 56
+                              (<= 11 pitch 20) 57
                               (<= 21 pitch 30) 60
                               (<= 31 pitch 40) 62
                               (<= 41 pitch 50) 63
