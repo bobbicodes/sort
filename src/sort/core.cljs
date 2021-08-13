@@ -112,7 +112,7 @@
     (if (seq @elements)
       (do
         (reset! highlighted (+ idx (count @sorted)))
-        (audio/play-note! val)
+        (audio/play-note! (+ idx (count @sorted)))
         (swap! sorted conj val)
         (swap! elements #(remove-nth % idx)))
       (do
