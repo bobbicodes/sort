@@ -192,3 +192,14 @@ cljs꞉sort.core꞉> 
 cljs꞉sort.core꞉> 
 95
 cljs꞉sort.core꞉> 
+nil
+; ------ WARNING - :undeclared-var -----------------------------------------------
+;  Resource: <eval>:1:2
+ Use of undeclared Var sort.audio/ramge
+--------------------------------------------------------------------------------
+
+cljs꞉sort.audio꞉> 
+()
+cljs꞉sort.audio꞉> 
+(1)
+cljs꞉sort.audio꞉> 

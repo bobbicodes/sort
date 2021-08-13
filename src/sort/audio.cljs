@@ -46,7 +46,7 @@
 
 (defn load-samples []
   (go-loop [result {}
-            sounds (range 1 19)]
+            sounds (range 1 2)]
     (if-not (nil? (first sounds))
       (let [sound (first sounds)
             decoded-buffer (<! (get-and-decode {:url (str "/sort/public/audio/" sound ".mp3")
