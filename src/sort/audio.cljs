@@ -101,7 +101,9 @@
                               (<= 81 pitch 90) 72
                               (<= 91 pitch 99) 74
                               :else 76)
-         instrument (if (< pitch 61) 15 14)
+         instrument 
+         ;(if (< pitch 61) 15 14)
+         1
          audio-buffer  (:decoded-buffer (get samples instrument))
          sample-source (.createBufferSource *context*)]
      (set! (.-buffer sample-source) audio-buffer)

@@ -31,6 +31,8 @@ cljs$core$IChunkedSeq$_chunked_first$arity$1:sb
 cljs$core$IChunkedSeq$_chunked_rest$arity$1:Ta
 cljs$core$ICollection$:Xc
 cljs$core$ICollection$_conj$arity$2:ca
+cljs$core$IComparable$:Cd
+cljs$core$IComparable$_compare$arity$2:Bd
 cljs$core$ICounted$:Ac
 cljs$core$ICounted$_count$arity$1:R
 cljs$core$IDeref$_deref$arity$1:Ua

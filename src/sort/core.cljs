@@ -44,6 +44,7 @@
 (defonce sorted (r/atom []))
 (defonce algo (r/atom "Insertion sort"))
 (defonce highlighted (r/atom nil))
+(defonce pointer (r/atom 0))
 
 (defn bars [items]
   (let [bars items
@@ -51,13 +52,13 @@
         hl highlighted]
     (into [:g]
           (for [bar (range (count bars))]
-            (svg-bar bar-width 
-                 (nth bars bar) 
-                 (* bar bar-width) 
-                 (- 100 (nth bars bar))
-                 (if (= bar @hl)
-                   "red"
-                   "yellow"))))))
+            (svg-bar bar-width
+                     (nth bars bar)
+                     (* bar bar-width)
+                     (- 100 (nth bars bar))
+                     (if (= bar @hl)
+                       "red"
+                       "yellow"))))))
 
 (defn remove-nth
   [nums n]
@@ -71,6 +72,8 @@
 
     (cond (= @algo "Selection sort")
           [bars (into @sorted @elements)]
+          (= @algo "Bubble sort")
+          [bars @elements]
           (= @algo "Insertion sort")
           [bars (into (vec  @sorted) @elements)])]])
 
@@ -86,7 +89,8 @@
   (let [now (.-currentTime *context*)]
     (doall (for [note (range (count notes))]
              (do (reset! highlighted note)
-                 (audio/play-note! (get notes note) (+ now (/ note 50.0))))))))
+                 (when (< note 20) 
+                   (audio/play-note! (get notes note) (+ now (/ note 30.0)))))))))
 
 (defn insert! []
   (let [lesser-items (vec (take-while #(< % (first @elements)) @sorted))]
@@ -119,12 +123,30 @@
         (stop-timer! @timer-id)
         (sweep-notes! @sorted)))))
 
+(defn exchange [v]
+  (assoc v (inc @pointer) (v @pointer) @pointer (v (inc @pointer))))
+
+(defn bubble! []
+  (let [item1 (get @elements @pointer)
+        item2 (get @elements (inc @pointer))]
+    (when (= @pointer 95)
+      (reset! pointer 0))
+    (if (not= @elements (sort @elements))
+      (do
+        (when (< item2 item1)
+          (swap! elements #(exchange %))
+          (audio/play-note! @pointer))
+        (reset! highlighted (inc @pointer))
+        (swap! pointer inc))
+      (do
+        (stop-timer! @timer-id)
+        (sweep-notes! @elements)))))
+
 (defn start-timer! []
   (when (= @timer :off)
-    (reset! timer-id (js/setInterval #(cond
-                                        (= @algo "Selection sort") (select!)
-                                        (= @algo "Insertion sort") (insert!))
-                                     200))
+    (reset! timer-id (cond (= @algo "Selection sort") (js/setInterval select! 100)
+                           (= @algo "Insertion sort") (js/setInterval insert! 100)
+                           (= @algo "Bubble sort") (js/setInterval bubble! 4)))
     (reset! timer :on)))
 
 (defn home-page []
@@ -137,7 +159,8 @@
       [:h2 "Musical Sorting"]
       [:select {:on-change #(reset! algo (.. % -target -value))}
        [:option {:value "Insertion sort"} "Insertion sort"]
-       [:option {:value "Selection sort"} "Selection sort"]]
+       [:option {:value "Selection sort"} "Selection sort"]
+       [:option {:value "Bubble sort"} "Bubble sort"]]
       [button "Reset" (fn []
                         (reset! elements (vec (repeatedly 96 #(rand-int 100))))
                         (reset! sorted []))]]

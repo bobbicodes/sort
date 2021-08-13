@@ -25,3 +25,170 @@ clj꞉shadow.user꞉>  ; Use `alt+enter` to evaluate
 ;    (There is a button in the status bar for this)
 ; Jack-in done.
 cljs꞉cljs.user꞉>  ; Use `alt+enter` to evaluate
+[12
+ 69
+ 83
+ 86
+ 53
+ 76
+ 39
+ 85
+ 27
+ 36
+ 66
+ 52
+ 10
+ 26
+ 48
+ 2
+ 68
+ 52
+ 28
+ 28
+ 67
+ 53
+ 51
+ 93
+ 68
+ 30
+ 73
+ 63
+ 61
+ 91
+ 76
+ 95
+ 55
+ 68
+ 13
+ 66
+ 7
+ 52
+ 38
+ 72
+ 22
+ 67
+ 88
+ 70
+ 85
+ 47
+ 11
+ 88
+ 15
+ 59
+ ...]
+cljs꞉sort.core꞉> 
+[12
+ 69
+ 83
+ 86
+ 53
+ 76
+ 39
+ 85
+ 27
+ 36
+ 66
+ 52
+ 10
+ 26
+ 48
+ 2
+ 68
+ 52
+ 28
+ 28
+ 67
+ 53
+ 51
+ 93
+ 68
+ 30
+ 73
+ 63
+ 61
+ 91
+ 76
+ 95
+ 55
+ 68
+ 13
+ 66
+ 7
+ 52
+ 38
+ 72
+ 22
+ 67
+ 88
+ 70
+ 85
+ 47
+ 11
+ 88
+ 15
+ 59
+ ...]
+cljs꞉sort.core꞉> 
+139
+cljs꞉sort.core꞉> 
+:repl/exception!
+; 
+; Execution error (Error) at (<cljs repl>:1).
+No item 139 in vector of length 96
+cljs꞉sort.core꞉> 
+0
+cljs꞉sort.core꞉> 
+[34
+ 0
+ 46
+ 98
+ 99
+ 8
+ 79
+ 72
+ 52
+ 10
+ 80
+ 46
+ 70
+ 42
+ 17
+ 42
+ 48
+ 87
+ 0
+ 64
+ 42
+ 19
+ 38
+ 81
+ 22
+ 56
+ 15
+ 96
+ 97
+ 18
+ 41
+ 20
+ 73
+ 63
+ 19
+ 90
+ 94
+ 8
+ 53
+ 52
+ 45
+ 82
+ 84
+ 55
+ 49
+ 24
+ 12
+ 52
+ 47
+ 97
+ ...]
+cljs꞉sort.core꞉> 
+95
+cljs꞉sort.core꞉> 
