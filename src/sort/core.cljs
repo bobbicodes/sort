@@ -47,7 +47,7 @@
 
 (defn bars [items]
   (let [bars items
-        bar-width (/ 80 (count bars))
+        bar-width (/ 100 (count bars))
         hl highlighted]
     (into [:g]
           (for [bar (range (count bars))]
@@ -67,7 +67,7 @@
   [:svg {:width    "100%"
          :view-box (str "0 0 100 100")}
    [:g
-    (rect 0 0 80 100)
+    (rect 0 0 100 100)
 
     (cond (= @algo "Selection sort")
           [bars (into @sorted @elements)]
