@@ -48,6 +48,8 @@
 (defonce pointer (r/atom 0))
 (defonce heap (r/atom []))
 (defonce insert-ptr (r/atom 0))
+(defonce select-ptr (r/atom 0))
+(defonce select-min (r/atom {:val 999999 :index nil}))
 
 (defn bars [items]
   (let [bars items
@@ -133,8 +135,17 @@
   (= @insert-ptr (dec (count @sorted)))
   (into
    (conj (vec (take @insert-ptr @sorted)) (first @elements))
-   (subvec @sorted  @insert-ptr) )
+   (subvec @sorted  @insert-ptr))
   (insert!)
+  
+
+  (reset! highlighted 0)
+
+  (reset! select-min {:index nil :val 9999})
+
+  (= @select-ptr (count @elements))
+
+  (< (get @elements @select-ptr) (:val @select-min))
   )
 
 (defn select! []
@@ -142,14 +153,29 @@
         val (last min-val)
         idx (first min-val)]
     (if (seq @elements)
-      (do
-        (reset! highlighted (+ idx (count @sorted)))
-        (audio/play-note! (+ idx (count @sorted)))
-        (swap! sorted conj val)
-        (swap! elements #(remove-nth % idx)))
+      (cond
+        (= @select-ptr (count @elements))
+        (do
+          (audio/play-note! (+ (:index @select-min) (count @sorted)) (.-currentTime *context*) 15)
+          (swap! sorted conj (:val @select-min))
+          (swap! elements #(remove-nth % (:index @select-min)))
+          (reset! highlighted (count @sorted))
+          (reset! select-ptr 0)
+          (reset! select-min {:index (count @elements) :val 99999}))
+        :else
+        (do (when (< (get @elements @select-ptr) (:val @select-min))
+              (swap! select-min assoc :index @select-ptr :val (get @elements @select-ptr))
+              (audio/play-note! (get @elements @select-ptr)))
+            (swap! select-ptr inc)
+            (swap! highlighted inc)))
       (do
         (stop-timer! @timer-id)
         (sweep-notes! @sorted)))))
+
+(comment
+  (= (inc @select-ptr) (count @elements))
+  (select!)
+  )
 
 (defn exchange [v]
   (assoc v (inc @pointer) (v @pointer) @pointer (v (inc @pointer))))
@@ -163,7 +189,7 @@
       (do
         (when (< item2 item1)
           (swap! elements #(exchange %))
-          (audio/play-note! @pointer))
+          (audio/play-note! @pointer (.-currentTime *context*) 4))
         (reset! highlighted (inc @pointer))
         (swap! pointer inc))
       (do
@@ -260,9 +286,9 @@
 
 (defn start-timer! []
   (when (= @timer :off)
-    (reset! timer-id (cond (= @algo "Selection sort") (js/setInterval select! 150)
-                           (= @algo "Insertion sort") (js/setInterval insert! 50)
-                           (= @algo "Bubble sort") (js/setInterval bubble! 50)
+    (reset! timer-id (cond (= @algo "Selection sort") (js/setInterval select! 1)
+                           (= @algo "Insertion sort") (js/setInterval insert! 30)
+                           (= @algo "Bubble sort") (js/setInterval bubble! 5)
                            (= @algo "Heapsort") (js/setInterval heap! 200)))
     (reset! timer :on)))
 
@@ -284,7 +310,10 @@
                         (reset! elements (vec (repeatedly 96 #(rand-int 100))))
                         (reset! sorted [])
                         (reset! heap [])
-                        (reset! insert-ptr 0))]]
+                        (reset! insert-ptr 0)
+                        (reset! highlighted 0)
+                        (reset! select-ptr 0)
+                        (reset! select-min {:index nil :val 99999}))]]
      [:div
       [:button
        {:on-click
@@ -314,7 +343,8 @@
      (when (= @algo "Heapsort")
        [:p (str "Heap: " @heap)])
      [:p (str "Sorted: " @sorted)]
-     #_[:p (str "Insert pointer: " @insert-ptr)]
+     ;[:p (str "Select pointer: " @select-ptr)]
+     ;[:p (str "Select min: " @select-min)]
      #_(cond (= @algo "Selection sort")
            [:p (str "Smallest element: " val " at index " idx)]
            (= @algo "Insertion sort")
