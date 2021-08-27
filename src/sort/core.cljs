@@ -47,7 +47,7 @@
 (defonce highlighted (r/atom nil))
 (defonce pointer (r/atom 0))
 (defonce heap (r/atom []))
-
+(defonce insert-ptr (r/atom 0))
 
 (defn bars [items]
   (let [bars items
@@ -59,9 +59,10 @@
                      (/ (nth bars bar) 2.0)
                      (* bar bar-width)
                      (- 50 (/ (nth bars bar) 2.0))
-                     (if (= bar @hl)
-                       "red"
-                       "yellow"))))))
+                     (cond
+                       (= bar @hl) "red"
+                       (< bar (count @sorted)) "magenta"
+                       :else "yellow"))))))
 
 (defn remove-nth
   [nums n]
@@ -98,21 +99,43 @@
                    (audio/play-note! (get notes note) (+ now (/ note 30.0)))))))))
 
 (defn insert! []
-  (let [lesser-items (vec (take-while #(< % (first @elements)) @sorted))]
     (if (seq @elements)
-      (do
-        (reset! highlighted (count lesser-items))
-        (audio/play-note! (first @elements))
-        (reset! sorted (into
-                        (conj
-                         lesser-items
-                         (first @elements))
-                        (vec (drop (count lesser-items)
-                                   @sorted))))
-        (swap! elements #(vec (rest %))))
+      (cond (empty? @sorted)
+            (do (swap! sorted conj (first @elements))
+                (swap! elements #(vec (rest %)))
+                (reset! highlighted 0)
+                (audio/play-note! (first @elements)))
+            (> (get @sorted @insert-ptr) (first @elements))
+            (do (swap! sorted #(into
+                                (conj (vec (take @insert-ptr @sorted)) (first @elements))
+                                (subvec @sorted  @insert-ptr)))
+                (swap! elements #(vec (rest %)))
+                (reset! insert-ptr 0)
+                (reset! highlighted 0)
+                (audio/play-note! (first @elements) (.-currentTime *context*) 15))
+            (= @insert-ptr (dec (count @sorted)))
+            (do (swap! sorted conj (first @elements))
+                (swap! elements #(vec (rest %)))
+                (reset! insert-ptr 0)
+                (reset! highlighted 0)
+                (audio/play-note! (first @elements) (.-currentTime *context*) 15))
+            :else
+            (do (swap! insert-ptr inc)
+                (swap! highlighted inc)
+                (audio/play-note! @insert-ptr (.-currentTime *context*) 4)))
       (do
         (stop-timer! @timer-id)
-        (sweep-notes! @sorted)))))
+        (sweep-notes! @sorted))))
+
+(comment
+  (first @elements)
+  (> (get @sorted @insert-ptr) (first @elements))
+  (= @insert-ptr (dec (count @sorted)))
+  (into
+   (conj (vec (take @insert-ptr @sorted)) (first @elements))
+   (subvec @sorted  @insert-ptr) )
+  (insert!)
+  )
 
 (defn select! []
   (let [min-val (apply min-key second (map-indexed vector @elements))
@@ -238,7 +261,7 @@
 (defn start-timer! []
   (when (= @timer :off)
     (reset! timer-id (cond (= @algo "Selection sort") (js/setInterval select! 150)
-                           (= @algo "Insertion sort") (js/setInterval insert! 150)
+                           (= @algo "Insertion sort") (js/setInterval insert! 50)
                            (= @algo "Bubble sort") (js/setInterval bubble! 50)
                            (= @algo "Heapsort") (js/setInterval heap! 200)))
     (reset! timer :on)))
@@ -260,7 +283,8 @@
       [button "Reset" (fn []
                         (reset! elements (vec (repeatedly 96 #(rand-int 100))))
                         (reset! sorted [])
-                        (reset! heap []))]]
+                        (reset! heap [])
+                        (reset! insert-ptr 0))]]
      [:div
       [:button
        {:on-click
@@ -275,7 +299,7 @@
           (start-timer!))}
        "Play"]]
      [render-sort]
-          (cond (= @algo "Selection sort")
+          #_(cond (= @algo "Selection sort")
                 [:div
                  [:p " Selection sort works by repeatedly finding the smallest element and moving it to the left."]
                  [:p (str "Here, the smallest value is " val
@@ -290,7 +314,8 @@
      (when (= @algo "Heapsort")
        [:p (str "Heap: " @heap)])
      [:p (str "Sorted: " @sorted)]
-     (cond (= @algo "Selection sort")
+     #_[:p (str "Insert pointer: " @insert-ptr)]
+     #_(cond (= @algo "Selection sort")
            [:p (str "Smallest element: " val " at index " idx)]
            (= @algo "Insertion sort")
            [:p (str "Next element: " (first @elements)

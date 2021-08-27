@@ -46,10 +46,10 @@
 
 (defn load-samples []
   (go-loop [result {}
-            sounds (range 1 2)]
+            sounds (range 1 16)]
     (if-not (nil? (first sounds))
       (let [sound (first sounds)
-            decoded-buffer (<! (get-and-decode {:url (str "/sort/public/audio/" sound ".mp3")
+            decoded-buffer (<! (get-and-decode {:url (str "/audio/" sound ".mp3")
                                                 :sound sound}))]
         (prn sound)
         (prn decoded-buffer)
@@ -83,6 +83,8 @@
   ([pitch]
    (play-note! pitch (.-currentTime *context*)))
   ([pitch time]
+   (play-note! pitch time 1))
+  ([pitch time instrument]
    (let [adjusted-pitch (cond 
                           (= 0 pitch) 57
                           (= 1 pitch) 60
@@ -101,9 +103,6 @@
                               (<= 81 pitch 90) 72
                               (<= 91 pitch 99) 74
                               :else 76)
-         instrument 
-         ;(if (< pitch 61) 15 14)
-         1
          audio-buffer  (:decoded-buffer (get samples instrument))
          sample-source (.createBufferSource *context*)]
      (set! (.-buffer sample-source) audio-buffer)
