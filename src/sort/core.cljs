@@ -50,7 +50,8 @@
      :stroke       "#00d0ff"
      :stroke-width 0.05}]])
 
-(defonce elements (r/atom (vec (repeatedly 96 #(rand-int 100)))))
+(defonce num-items (r/atom 96))
+(defonce elements (r/atom (vec (repeatedly @num-items #(rand-int 100)))))
 (defonce sorted (r/atom []))
 (defonce algo (r/atom "Insertion sort"))
 (defonce highlighted (r/atom nil))
@@ -59,7 +60,7 @@
 (defonce insert-ptr (r/atom 0))
 (defonce select-ptr (r/atom 0))
 (defonce select-min (r/atom {:val 999999 :index nil}))
-(defonce bubble-max (r/atom 95))
+(defonce bubble-max (r/atom (dec @num-items)))
 (defonce bubble-down (r/atom 9999))
 
 (defn bars [items]
@@ -199,14 +200,14 @@
                                   (inc @pointer) (% @pointer) 
                                   @pointer (% (inc @pointer))))
           (reset! bubble-max @pointer)
-          (audio/play-note! @pointer (.-currentTime *context*) 4))
+          (audio/play-note! (mod @pointer 100) (.-currentTime *context*) 4))
         (swap! pointer inc)
         (reset! highlighted @pointer)
         )
       (do
         (stop-timer! @timer-id)
         (sweep-notes! @elements)))
-    (when (or (= @pointer 95) (= @pointer @bubble-down))
+    (when (or (= @pointer (dec @num-items)) (= @pointer @bubble-down))
       (reset! pointer 0)
       (reset! bubble-down @bubble-max)
       (audio/play-note! item1 (.-currentTime *context*) 15))))
@@ -217,6 +218,7 @@
      (or (= @pointer 95) (= @pointer @bubble-down))
 (not= @elements (sort @elements))
 (< item2 item1)
+     (mod 1023 100)
      )
   
   @pointer
@@ -339,18 +341,22 @@
        [:option {:value "Bubble sort"} "Bubble sort"]
        ]
       [button "Reset" (fn []
-                        (reset! elements (vec (repeatedly 96 #(rand-int 100))))
+                        (reset! elements (vec (repeatedly @num-items #(rand-int 100))))
                         (reset! sorted [])
                         (reset! heap [])
                         (reset! insert-ptr 0)
                         (reset! highlighted 0)
                         (reset! select-ptr 0)
                         (reset! select-min {:index nil :val 99999})
-                        (reset! bubble-max 95)
+                        (reset! bubble-max (dec @num-items))
                         (reset! bubble-down 999))]
+      [input "number" " Items: " @num-items #(do
+                                                     (reset! num-items (-> % .-target .-value js/parseInt))
+                                                     (stop-timer! @timer-id))]
       [input "number" " Delay (ms): " @step-delay #(do 
                                                      (reset! step-delay (-> % .-target .-value js/parseInt))
-                                                     (stop-timer! @timer-id))]]
+                                                     (stop-timer! @timer-id))]
+    ]
      [:div
       [:button
        {:on-click

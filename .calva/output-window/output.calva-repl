@@ -1405,3 +1405,5 @@ info {:Name Mafee, :age -1, :working true}
 
 nil
 cljs꞉sort.core꞉> 
+23
+cljs꞉sort.core꞉> 
