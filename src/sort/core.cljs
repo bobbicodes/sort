@@ -13,6 +13,15 @@
    {:on-click onclick}
    label])
 
+(defn input [type label value on-change]
+  [:label label
+   [:input
+    {:style     {:width            40
+                 :background-color "white"}
+     :type      type
+     :value     value
+     :on-change on-change}]])
+
 (defn polygon [& points]
   [:polygon
    {:stroke       "black"
@@ -305,12 +314,14 @@
   (heap!)
   )
 
+(defonce step-delay (r/atom 20))
+
 (defn start-timer! []
   (when (= @timer :off)
-    (reset! timer-id (cond (= @algo "Selection sort") (js/setInterval select! 1)
-                           (= @algo "Insertion sort") (js/setInterval insert! 5)
-                           (= @algo "Bubble sort") (js/setInterval bubble! 5)
-                           (= @algo "Heapsort") (js/setInterval heap! 200)))
+    (reset! timer-id (cond (= @algo "Selection sort") (js/setInterval select! @step-delay)
+                           (= @algo "Insertion sort") (js/setInterval insert! @step-delay)
+                           (= @algo "Bubble sort") (js/setInterval bubble! @step-delay)
+                           (= @algo "Heapsort") (js/setInterval heap! @step-delay)))
     (reset! timer :on)))
 
 (defn home-page []
@@ -336,7 +347,10 @@
                         (reset! select-ptr 0)
                         (reset! select-min {:index nil :val 99999})
                         (reset! bubble-max 95)
-                        (reset! bubble-down 999))]]
+                        (reset! bubble-down 999))]
+      [input "number" " Delay (ms): " @step-delay #(do 
+                                                     (reset! step-delay (-> % .-target .-value js/parseInt))
+                                                     (stop-timer! @timer-id))]]
      [:div
       [:button
        {:on-click

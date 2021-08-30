@@ -1161,3 +1161,247 @@ cljs꞉sort.core꞉> 
 cljs꞉sort.core꞉> 
 2
 cljs꞉sort.core꞉> 
+#object[AudioBufferSourceNode [object AudioBufferSourceNode]]
+cljs꞉sort.core꞉> 
+#object[AudioBufferSourceNode [object AudioBufferSourceNode]]
+cljs꞉sort.core꞉> 
+1
+cljs꞉sort.core꞉> 
+#object[AudioBufferSourceNode [object AudioBufferSourceNode]]
+cljs꞉sort.core꞉> 
+1
+cljs꞉sort.core꞉> 
+2
+cljs꞉sort.core꞉> 
+#object[AudioBufferSourceNode [object AudioBufferSourceNode]]
+cljs꞉sort.core꞉> 
+1
+cljs꞉sort.core꞉> 
+2
+cljs꞉sort.core꞉> 
+3
+cljs꞉sort.core꞉> 
+#object[AudioBufferSourceNode [object AudioBufferSourceNode]]
+cljs꞉sort.core꞉> 
+1
+cljs꞉sort.core꞉> 
+2
+cljs꞉sort.core꞉> 
+3
+cljs꞉sort.core꞉> 
+#object[AudioBufferSourceNode [object AudioBufferSourceNode]]
+cljs꞉sort.core꞉> 
+1
+cljs꞉sort.core꞉> 
+2
+cljs꞉sort.core꞉> 
+3
+cljs꞉sort.core꞉> 
+4
+cljs꞉sort.core꞉> 
+5
+cljs꞉sort.core꞉> 
+#object[AudioBufferSourceNode [object AudioBufferSourceNode]]
+cljs꞉sort.core꞉> 
+1
+cljs꞉sort.core꞉> 
+2
+cljs꞉sort.core꞉> 
+3
+cljs꞉sort.core꞉> 
+4
+cljs꞉sort.core꞉> 
+5
+cljs꞉sort.core꞉> 
+#object[AudioBufferSourceNode [object AudioBufferSourceNode]]
+cljs꞉sort.core꞉> 
+1
+cljs꞉sort.core꞉> 
+2
+cljs꞉sort.core꞉> 
+3
+cljs꞉sort.core꞉> 
+#object[AudioBufferSourceNode [object AudioBufferSourceNode]]
+cljs꞉sort.core꞉> 
+1
+cljs꞉sort.core꞉> 
+2
+cljs꞉sort.core꞉> 
+3
+cljs꞉sort.core꞉> 
+4
+cljs꞉sort.core꞉> 
+5
+cljs꞉sort.core꞉> 
+6
+cljs꞉sort.core꞉> 
+7
+cljs꞉sort.core꞉> 
+8
+cljs꞉sort.core꞉> 
+#object[AudioBufferSourceNode [object AudioBufferSourceNode]]
+cljs꞉sort.core꞉> 
+1
+cljs꞉sort.core꞉> 
+2
+cljs꞉sort.core꞉> 
+3
+cljs꞉sort.core꞉> 
+4
+cljs꞉sort.core꞉> 
+#object[AudioBufferSourceNode [object AudioBufferSourceNode]]
+cljs꞉sort.core꞉> 
+1
+cljs꞉sort.core꞉> 
+2
+cljs꞉sort.core꞉> 
+3
+cljs꞉sort.core꞉> 
+#object[AudioBufferSourceNode [object AudioBufferSourceNode]]
+cljs꞉sort.core꞉> 
+1
+cljs꞉sort.core꞉> 
+2
+cljs꞉sort.core꞉> 
+#object[AudioBufferSourceNode [object AudioBufferSourceNode]]
+cljs꞉sort.core꞉> 
+1
+cljs꞉sort.core꞉> 
+2
+cljs꞉sort.core꞉> 
+3
+cljs꞉sort.core꞉> 
+4
+cljs꞉sort.core꞉> 
+5
+cljs꞉sort.core꞉> 
+6
+cljs꞉sort.core꞉> 
+7
+cljs꞉sort.core꞉> 
+8
+cljs꞉sort.core꞉> 
+9
+cljs꞉sort.core꞉> 
+10
+cljs꞉sort.core꞉> 
+#object[AudioBufferSourceNode [object AudioBufferSourceNode]]
+cljs꞉sort.core꞉> 
+#object[AudioBufferSourceNode [object AudioBufferSourceNode]]
+cljs꞉sort.core꞉> 
+1
+cljs꞉sort.core꞉> 
+#object[AudioBufferSourceNode [object AudioBufferSourceNode]]
+cljs꞉sort.core꞉> 
+1
+cljs꞉sort.core꞉> 
+2
+cljs꞉sort.core꞉> 
+3
+cljs꞉sort.core꞉> 
+4
+cljs꞉sort.core꞉> 
+5
+cljs꞉sort.core꞉> 
+6
+cljs꞉sort.core꞉> 
+#object[AudioBufferSourceNode [object AudioBufferSourceNode]]
+cljs꞉sort.core꞉> 
+1
+cljs꞉sort.core꞉> 
+2
+cljs꞉sort.core꞉> 
+3
+cljs꞉sort.core꞉> 
+4
+cljs꞉sort.core꞉> 
+5
+cljs꞉sort.core꞉> 
+6
+cljs꞉sort.core꞉> 
+7
+cljs꞉sort.core꞉> 
+8
+cljs꞉sort.core꞉> 
+9
+cljs꞉sort.core꞉> 
+10
+cljs꞉sort.core꞉> 
+11
+cljs꞉sort.core꞉> 
+12
+cljs꞉sort.core꞉> 
+info {:Name Wags, :age 55, :working true}
+
+nil
+cljs꞉sort.core꞉> 
+"info{:Name \"Wags\", :age 55, :working true}"
+cljs꞉sort.core꞉> 
+{:Name "Wags", :age 55, :working true}
+cljs꞉sort.core꞉> 
+nil
+; ------ WARNING - :undeclared-var -----------------------------------------------
+;  Resource: <eval>:1:14
+ Use of undeclared Var sort.core/Mafee
+--------------------------------------------------------------------------------
+
+cljs꞉sort.core꞉> 
+nil
+; ------ WARNING - :undeclared-var -----------------------------------------------
+;  Resource: <eval>:1:14
+ Use of undeclared Var sort.core/Mafee
+--------------------------------------------------------------------------------
+
+cljs꞉sort.core꞉> 
+nil
+; ------ WARNING - :undeclared-var -----------------------------------------------
+;  Resource: <eval>:1:14
+ Use of undeclared Var sort.core/Mafee
+--------------------------------------------------------------------------------
+
+cljs꞉sort.core꞉> 
+nil
+; ------ WARNING - :undeclared-var -----------------------------------------------
+;  Resource: <eval>:1:14
+ Use of undeclared Var sort.core/Mafee
+--------------------------------------------------------------------------------
+
+cljs꞉sort.core꞉> 
+{:Name "Wags", :age 55, :working true}
+cljs꞉sort.core꞉> 
+{:Name (Mafee), :age (-1), :working true}
+cljs꞉sort.core꞉> 
+#'sort.core/names
+cljs꞉sort.core꞉> 
+#'sort.core/ages
+cljs꞉sort.core꞉> 
+nil
+; ------ WARNING - :undeclared-var -----------------------------------------------
+;  Resource: <eval>:1:16
+ Use of undeclared Var sort.core/is-correct?
+--------------------------------------------------------------------------------
+
+cljs꞉sort.core꞉> 
+nil
+; ------ WARNING - :undeclared-var -----------------------------------------------
+;  Resource: <eval>:1:16
+ Use of undeclared Var sort.core/is-correct?
+--------------------------------------------------------------------------------
+
+cljs꞉sort.core꞉> 
+info {:Name Wags, :age 55, :working true}
+
+nil
+cljs꞉sort.core꞉> 
+info {:Name (Mafee), :age (-1), :working true}
+
+nil
+cljs꞉sort.core꞉> 
+info {:Name Mafee, :age (-1), :working true}
+
+nil
+cljs꞉sort.core꞉> 
+info {:Name Mafee, :age -1, :working true}
+
+nil
+cljs꞉sort.core꞉> 
