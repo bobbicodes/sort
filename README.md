@@ -8,6 +8,8 @@
 
 I've made a certain effort to render these algorithms _musically_, i.e. the notes are restricted to the blues scale, and I attempt to create an instrumental counterpoint that reflects the sorting mechanics. I tried to strike a balance between it seeming "generative" enough as well as what I'd subjectively consider "pleasing" or "interesting".
 
+Not for comparative analytics, just for fun!
+
 ### Development mode
 ```
 npm install
