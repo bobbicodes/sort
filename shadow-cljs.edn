@@ -1,6 +1,5 @@
 {:source-paths ["src"]
  :dependencies [[binaryage/devtools "1.0.3"]
-                [org.clojure/core.async "0.4.500"]
                 [nrepl "0.8.3"]
                 [reagent "1.1.0"]]
  :builds       {:app {:target     :browser

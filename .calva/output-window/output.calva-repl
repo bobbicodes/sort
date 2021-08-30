@@ -25,1794 +25,9 @@ clj꞉shadow.user꞉>  ; Use `alt+enter` to evaluate
 ;    (There is a button in the status bar for this)
 ; Jack-in done.
 cljs꞉cljs.user꞉>  ; Use `alt+enter` to evaluate
-:repl/exception!
-; 
-; Execution error (Error) at (<cljs repl>:1).
-[object Object] is not ISeqable
-cljs꞉sort.core꞉> 
-#object[AudioBufferSourceNode [object AudioBufferSourceNode]]
-cljs꞉sort.core꞉> 
-#object[AudioBufferSourceNode [object AudioBufferSourceNode]]
-cljs꞉sort.core꞉> 
-#object[AudioBufferSourceNode [object AudioBufferSourceNode]]
-cljs꞉sort.core꞉> 
 nil
-cljs꞉sort.core꞉> 
-1
-cljs꞉sort.core꞉> 
-#object[AudioBufferSourceNode [object AudioBufferSourceNode]]
-cljs꞉sort.core꞉> 
-1
-cljs꞉sort.core꞉> 
-2
-cljs꞉sort.core꞉> 
-3
-cljs꞉sort.core꞉> 
-4
-cljs꞉sort.core꞉> 
-5
-cljs꞉sort.core꞉> 
-#object[AudioBufferSourceNode [object AudioBufferSourceNode]]
-cljs꞉sort.core꞉> 
-1
-cljs꞉sort.core꞉> 
-0
-cljs꞉sort.core꞉> 
-#object[AudioBufferSourceNode [object AudioBufferSourceNode]]
-cljs꞉sort.core꞉> 
-[36
- 99
- 38
- 10
- 0
- 26
- 53
- 7
- 26
- 26
- 95
- 27
- 94
- 45
- 99
- 10
- 3
- 92
- 68
- 47
- 46
- 69
- 96
- 53
- 38
- 52
- 3
- 56
- 41
- 17
- 19
- 48
- 36
- 34
- 54
- 86
- 86
- 47
- 72
- 27
- 15
- 30
- 34
- 85
- 89
- 38
- 92
- 5
- 8
- 60
- ...]
-cljs꞉sort.core꞉> 
-#object[AudioBufferSourceNode [object AudioBufferSourceNode]]
-cljs꞉sort.core꞉> 
-[79
- 58
- 47
- 79
- 7
- 32
- 36
- 87
- 30
- 6
- 22
- 0
- 31
- 40
- 65
- 94
- 83
- 5
- 94
- 21
- 30
- 10
- 77
- 63
- 83
- 69
- 45
- 20
- 11
- 89
- 67
- 15
- 36
- 23
- 11
- 84
- 47
- 14
- 74
- 16
- 44
- 97
- 3
- 9
- 75
- 53
- 12
- 34
- 60
- 36
- ...]
-cljs꞉sort.core꞉> 
-#object[AudioBufferSourceNode [object AudioBufferSourceNode]]
-cljs꞉sort.core꞉> 
-0
-cljs꞉sort.core꞉> 
-#object[AudioBufferSourceNode [object AudioBufferSourceNode]]
-cljs꞉sort.core꞉> 
-[35
- 11
- 98
- 25
- 41
- 30
- 53
- 64
- 32
- 76
- 36
- 43
- 52
- 67
- 64
- 60
- 99
- 98
- 5
- 66
- 96
- 79
- 62
- 58
- 23
- 44
- 46
- 68
- 47
- 3
- 95
- 63
- 40
- 44
- 14
- 87
- 24
- 70
- 83
- 5
- 36
- 15
- 23
- 87
- 16
- 62
- 57
- 37
- 89
- 29
- ...]
-cljs꞉sort.core꞉> 
-2
-cljs꞉sort.core꞉> 
-0
-cljs꞉sort.core꞉> 
-#object[AudioBufferSourceNode [object AudioBufferSourceNode]]
-cljs꞉sort.core꞉> 
-[2
- 10
- 25
- 96
- 53
- 31
- 4
- 63
- 29
- 8
- 82
- 71
- 33
- 20
- 48
- 21
- 42
- 69
- 48
- 77
- 27
- 31
- 7
- 8
- 70
- 83
- 90
- 94
- 91
- 79
- 39
- 74
- 80
- 17
- 43
- 74
- 1
- 54
- 44
- 56
- 30
- 40
- 37
- 61
- 20
- 75
- 49
- 6
- 60
- 43
- ...]
-cljs꞉sort.core꞉> 
-0
-cljs꞉sort.core꞉> 
-#object[AudioBufferSourceNode [object AudioBufferSourceNode]]
-cljs꞉sort.core꞉> 
-false
-cljs꞉sort.core꞉> 
-22
-cljs꞉sort.core꞉> 
-false
-cljs꞉sort.core꞉> 
-true
-cljs꞉sort.core꞉> 
-[8
- 70
- 3
- 78
- 7
- 40
- 3
- 89
- 71
- 94
- 36
- 79
- 80
- 51
- 42
- 53
- 9
- 80
- 88
- 26
- 35
- 77
- 60
- 66
- 78
- 47
- 19
- 64
- 30
- 30
- 21
- 66
- 16
- 15
- 66
- 34
- 47
- 17
- 17
- 50
- 23
- 73
- 79
- 1
- 49
- 64
- 77
- 12
- 70
- 40
- ...]
-cljs꞉sort.core꞉> 
-8
-cljs꞉sort.core꞉> 
-true
-cljs꞉sort.core꞉> 
-0
-cljs꞉sort.core꞉> 
-#object[AudioBufferSourceNode [object AudioBufferSourceNode]]
-cljs꞉sort.core꞉> 
-0
-cljs꞉sort.core꞉> 
-#object[AudioBufferSourceNode [object AudioBufferSourceNode]]
-cljs꞉sort.core꞉> 
-false
-cljs꞉sort.core꞉> 
-[66
- 47
- 36
- 60
- 86
- 18
- 31
- 75
- 1
- 40
- 5
- 99
- 13
- 43
- 57
- 36
- 44
- 68
- 55
- 57
- 18
- 4
- 45
- 48
- 59
- 24
- 70
- 47
- 18
- 74
- 36
- 11
- 11
- 2
- 21
- 8
- 70
- 9
- 8
- 94
- 13
- 53
- 76
- 2
- 77
- 68
- 83
- 84
- 63
- 33
- ...]
-cljs꞉sort.core꞉> 
-false
-cljs꞉sort.core꞉> 
-false
-cljs꞉sort.core꞉> 
-1
-cljs꞉sort.core꞉> 
-false
-cljs꞉sort.core꞉> 
-[47
- 36
- 60
- 86
- 18
- 31
- 75
- 1
- 40
- 5
- 99
- 13
- 43
- 57
- 36
- 44
- 68
- 55
- 57
- 18
- 4
- 45
- 48
- 59
- 24
- 70
- 47
- 18
- 74
- 36
- 11
- 11
- 2
- 21
- 8
- 70
- 9
- 8
- 94
- 13
- 53
- 76
- 2
- 77
- 68
- 83
- 84
- 63
- 33
- 52
- ...]
-cljs꞉sort.core꞉> 
-false
-cljs꞉sort.core꞉> 
-2
-cljs꞉sort.core꞉> 
-true
-cljs꞉sort.core꞉> 
-nil
-; ------ WARNING - :undeclared-var -----------------------------------------------
-;  Resource: <eval>:1:23
- Use of undeclared Var sort.core/%
---------------------------------------------------------------------------------
-
-; ------ WARNING - :undeclared-var -----------------------------------------------
-;  Resource: <eval>:1:39
- Use of undeclared Var sort.core/%
---------------------------------------------------------------------------------
-
-; ------ WARNING - :undeclared-var -----------------------------------------------
-;  Resource: <eval>:2:44
- Use of undeclared Var sort.core/%
---------------------------------------------------------------------------------
-
-cljs꞉sort.core꞉> 
-([47 10 31 66] 31 66)
-cljs꞉sort.core꞉> 
-(31 66)
-cljs꞉sort.core꞉> 
-[47 10 31 66 (10 31 66)]
-cljs꞉sort.core꞉> 
-[47 10 31 66]
-cljs꞉sort.core꞉> 
-(10 31 66)
-cljs꞉sort.core꞉> 
-(10 31)
-cljs꞉sort.core꞉> 
-[10 31]
-cljs꞉sort.core꞉> 
-[10 31 47]
-cljs꞉sort.core꞉> 
-[10 31 47 (10 31 66)]
-cljs꞉sort.core꞉> 
-(10 31 66)
-cljs꞉sort.core꞉> 
-[10 31 47 (66)]
-cljs꞉sort.core꞉> 
-(66)
-cljs꞉sort.core꞉> 
-[10 31 47 66]
-cljs꞉sort.core꞉> 
-#object[AudioBufferSourceNode [object AudioBufferSourceNode]]
-cljs꞉sort.core꞉> 
-[29
- 64
- 63
- 23
- 76
- 24
- 69
- 85
- 2
- 39
- 30
- 42
- 23
- 69
- 23
- 15
- 60
- 18
- 89
- 71
- 13
- 29
- 82
- 53
- 75
- 73
- 54
- 88
- 94
- 30
- 55
- 88
- 63
- 89
- 54
- 37
- 76
- 8
- 81
- 3
- 1
- 22
- 77
- 59
- 29
- 59
- 57
- 64
- 73
- 54
- ...]
-cljs꞉sort.core꞉> 
-0
-cljs꞉sort.core꞉> 
-[63
- 23
- 76
- 24
- 69
- 85
- 2
- 39
- 30
- 42
- 23
- 69
- 23
- 15
- 60
- 18
- 89
- 71
- 13
- 29
- 82
- 53
- 75
- 73
- 54
- 88
- 94
- 30
- 55
- 88
- 63
- 89
- 54
- 37
- 76
- 8
- 81
- 3
- 1
- 22
- 77
- 59
- 29
- 59
- 57
- 64
- 73
- 54
- 20
- 75
- ...]
-cljs꞉sort.core꞉> 
-1
-cljs꞉sort.core꞉> 
-0
-cljs꞉sort.core꞉> 
-0
-cljs꞉sort.core꞉> 
-[24
- 69
- 85
- 2
- 39
- 30
- 42
- 23
- 69
- 23
- 15
- 60
- 18
- 89
- 71
- 13
- 29
- 82
- 53
- 75
- 73
- 54
- 88
- 94
- 30
- 55
- 88
- 63
- 89
- 54
- 37
- 76
- 8
- 81
- 3
- 1
- 22
- 77
- 59
- 29
- 59
- 57
- 64
- 73
- 54
- 20
- 75
- 35
- 81
- 90
- ...]
-cljs꞉sort.core꞉> 
-2
-cljs꞉sort.core꞉> 
-0
-cljs꞉sort.core꞉> 
-3
-cljs꞉sort.core꞉> 
-[85
- 2
- 39
- 30
- 42
- 23
- 69
- 23
- 15
- 60
- 18
- 89
- 71
- 13
- 29
- 82
- 53
- 75
- 73
- 54
- 88
- 94
- 30
- 55
- 88
- 63
- 89
- 54
- 37
- 76
- 8
- 81
- 3
- 1
- 22
- 77
- 59
- 29
- 59
- 57
- 64
- 73
- 54
- 20
- 75
- 35
- 81
- 90
- 1
- 80
- ...]
-cljs꞉sort.core꞉> 
-4
-cljs꞉sort.core꞉> 
-[2
- 39
- 30
- 42
- 23
- 69
- 23
- 15
- 60
- 18
- 89
- 71
- 13
- 29
- 82
- 53
- 75
- 73
- 54
- 88
- 94
- 30
- 55
- 88
- 63
- 89
- 54
- 37
- 76
- 8
- 81
- 3
- 1
- 22
- 77
- 59
- 29
- 59
- 57
- 64
- 73
- 54
- 20
- 75
- 35
- 81
- 90
- 1
- 80
- 90
- ...]
-cljs꞉sort.core꞉> 
-0
-cljs꞉sort.core꞉> 
-5
-cljs꞉sort.core꞉> 
-6
 cljs꞉sort.core꞉> 
 7
-cljs꞉sort.core꞉> 
-0
-cljs꞉sort.core꞉> 
-8
-cljs꞉sort.core꞉> 
-9
-cljs꞉sort.core꞉> 
-10
-cljs꞉sort.core꞉> 
-0
-cljs꞉sort.core꞉> 
-11
-cljs꞉sort.core꞉> 
-12
-cljs꞉sort.core꞉> 
-13
-cljs꞉sort.core꞉> 
-14
-cljs꞉sort.core꞉> 
-15
-cljs꞉sort.core꞉> 
-0
-cljs꞉sort.core꞉> 
-16
-cljs꞉sort.core꞉> 
-0
-cljs꞉sort.core꞉> 
-17
-cljs꞉sort.core꞉> 
-[23
- 15
- 60
- 18
- 89
- 71
- 13
- 29
- 82
- 53
- 75
- 73
- 54
- 88
- 94
- 30
- 55
- 88
- 63
- 89
- 54
- 37
- 76
- 8
- 81
- 3
- 1
- 22
- 77
- 59
- 29
- 59
- 57
- 64
- 73
- 54
- 20
- 75
- 35
- 81
- 90
- 1
- 80
- 90
- 18
- 37
- 95
- 23
- 53
- 93
- ...]
-cljs꞉sort.core꞉> 
-18
-cljs꞉sort.core꞉> 
-0
-cljs꞉sort.core꞉> 
-0
-cljs꞉sort.core꞉> 
-[18
- 89
- 71
- 13
- 29
- 82
- 53
- 75
- 73
- 54
- 88
- 94
- 30
- 55
- 88
- 63
- 89
- 54
- 37
- 76
- 8
- 81
- 3
- 1
- 22
- 77
- 59
- 29
- 59
- 57
- 64
- 73
- 54
- 20
- 75
- 35
- 81
- 90
- 1
- 80
- 90
- 18
- 37
- 95
- 23
- 53
- 93
- 28
- 62
- 13
- ...]
-cljs꞉sort.core꞉> 
-19
-cljs꞉sort.core꞉> 
-0
-cljs꞉sort.core꞉> 
-20
-cljs꞉sort.core꞉> 
-[71
- 13
- 29
- 82
- 53
- 75
- 73
- 54
- 88
- 94
- 30
- 55
- 88
- 63
- 89
- 54
- 37
- 76
- 8
- 81
- 3
- 1
- 22
- 77
- 59
- 29
- 59
- 57
- 64
- 73
- 54
- 20
- 75
- 35
- 81
- 90
- 1
- 80
- 90
- 18
- 37
- 95
- 23
- 53
- 93
- 28
- 62
- 13
- 89
- 32
- ...]
-cljs꞉sort.core꞉> 
-21
-cljs꞉sort.core꞉> 
-0
-cljs꞉sort.core꞉> 
-0
-cljs꞉sort.core꞉> 
-[82
- 53
- 75
- 73
- 54
- 88
- 94
- 30
- 55
- 88
- 63
- 89
- 54
- 37
- 76
- 8
- 81
- 3
- 1
- 22
- 77
- 59
- 29
- 59
- 57
- 64
- 73
- 54
- 20
- 75
- 35
- 81
- 90
- 1
- 80
- 90
- 18
- 37
- 95
- 23
- 53
- 93
- 28
- 62
- 13
- 89
- 32
- 52
- 0
- 85
- ...]
-cljs꞉sort.core꞉> 
-22
-cljs꞉sort.core꞉> 
-[53
- 75
- 73
- 54
- 88
- 94
- 30
- 55
- 88
- 63
- 89
- 54
- 37
- 76
- 8
- 81
- 3
- 1
- 22
- 77
- 59
- 29
- 59
- 57
- 64
- 73
- 54
- 20
- 75
- 35
- 81
- 90
- 1
- 80
- 90
- 18
- 37
- 95
- 23
- 53
- 93
- 28
- 62
- 13
- 89
- 32
- 52
- 0
- 85
- 10
- ...]
-cljs꞉sort.core꞉> 
-23
-cljs꞉sort.core꞉> 
-0
-cljs꞉sort.core꞉> 
-24
-cljs꞉sort.core꞉> 
-25
-cljs꞉sort.core꞉> 
-26
-cljs꞉sort.core꞉> 
-0
-cljs꞉sort.core꞉> 
-27
-cljs꞉sort.core꞉> 
-28
-cljs꞉sort.core꞉> 
-29
-cljs꞉sort.core꞉> 
-0
-cljs꞉sort.core꞉> 
-#object[AudioBufferSourceNode [object AudioBufferSourceNode]]
-cljs꞉sort.core꞉> 
-0
-cljs꞉sort.core꞉> 
-[0
- 62
- 55
- 3
- 31
- 69
- 22
- 73
- 81
- 66
- 94
- 76
- 9
- 45
- 75
- 41
- 17
- 73
- 84
- 69
- 77
- 88
- 76
- 20
- 33
- 62
- 89
- 69
- 11
- 80
- 90
- 71
- 70
- 40
- 93
- 92
- 54
- 89
- 9
- 8
- 45
- 30
- 56
- 75
- 60
- 5
- 43
- 15
- 52
- 86
- ...]
-cljs꞉sort.core꞉> 
-0
-cljs꞉sort.core꞉> 
-[55
- 3
- 31
- 69
- 22
- 73
- 81
- 66
- 94
- 76
- 9
- 45
- 75
- 41
- 17
- 73
- 84
- 69
- 77
- 88
- 76
- 20
- 33
- 62
- 89
- 69
- 11
- 80
- 90
- 71
- 70
- 40
- 93
- 92
- 54
- 89
- 9
- 8
- 45
- 30
- 56
- 75
- 60
- 5
- 43
- 15
- 52
- 86
- 72
- 43
- ...]
-cljs꞉sort.core꞉> 
-55
-cljs꞉sort.core꞉> 
-55
-cljs꞉sort.core꞉> 
-false
-cljs꞉sort.core꞉> 
-1
-cljs꞉sort.core꞉> 
-55
-cljs꞉sort.core꞉> 
-true
-cljs꞉sort.core꞉> 
-0
-cljs꞉sort.core꞉> 
-false
-cljs꞉sort.core꞉> 
-2
-cljs꞉sort.core꞉> 
-true
-cljs꞉sort.core꞉> 
-[0 3]
-cljs꞉sort.core꞉> 
-[0 3 55]
-cljs꞉sort.core꞉> 
-0
-cljs꞉sort.core꞉> 
-false
-cljs꞉sort.core꞉> 
-3
-cljs꞉sort.core꞉> 
-false
-cljs꞉sort.core꞉> 
-false
-cljs꞉sort.core꞉> 
-false
-cljs꞉sort.core꞉> 
-4
-cljs꞉sort.core꞉> 
-#object[AudioBufferSourceNode [object AudioBufferSourceNode]]
-cljs꞉sort.core꞉> 
-[81
- 96
- 6
- 75
- 23
- 8
- 91
- 12
- 39
- 9
- 9
- 58
- 63
- 28
- 75
- 92
- 89
- 65
- 2
- 56
- 80
- 29
- 23
- 96
- 58
- 75
- 29
- 57
- 14
- 55
- 74
- 14
- 25
- 21
- 6
- 57
- 73
- 53
- 45
- 27
- 92
- 38
- 2
- 54
- 99
- 9
- 93
- 97
- 39
- 0
- ...]
-cljs꞉sort.core꞉> 
-1
-cljs꞉sort.core꞉> 
-[96
- 6
- 75
- 23
- 8
- 91
- 12
- 39
- 9
- 9
- 58
- 63
- 28
- 75
- 92
- 89
- 65
- 2
- 56
- 80
- 29
- 23
- 96
- 58
- 75
- 29
- 57
- 14
- 55
- 74
- 14
- 25
- 21
- 6
- 57
- 73
- 53
- 45
- 27
- 92
- 38
- 2
- 54
- 99
- 9
- 93
- 97
- 39
- 0
- 45
- ...]
-cljs꞉sort.core꞉> 
-2
-cljs꞉sort.core꞉> 
-[6
- 75
- 23
- 8
- 91
- 12
- 39
- 9
- 9
- 58
- 63
- 28
- 75
- 92
- 89
- 65
- 2
- 56
- 80
- 29
- 23
- 96
- 58
- 75
- 29
- 57
- 14
- 55
- 74
- 14
- 25
- 21
- 6
- 57
- 73
- 53
- 45
- 27
- 92
- 38
- 2
- 54
- 99
- 9
- 93
- 97
- 39
- 0
- 45
- 6
- ...]
-cljs꞉sort.core꞉> 
-0
-cljs꞉sort.core꞉> 
-#object[AudioBufferSourceNode [object AudioBufferSourceNode]]
-cljs꞉sort.core꞉> 
-0
-cljs꞉sort.core꞉> 
-0
-cljs꞉sort.core꞉> 
-1
-cljs꞉sort.core꞉> 
-0
-cljs꞉sort.core꞉> 
-false
-cljs꞉sort.core꞉> 
-1
-cljs꞉sort.core꞉> 
-false
-cljs꞉sort.core꞉> 
-2
-cljs꞉sort.core꞉> 
-true
-cljs꞉sort.core꞉> 
-[4 17 39 17 88]
-cljs꞉sort.core꞉> 
-(17 88)
-cljs꞉sort.core꞉> 
-3
-cljs꞉sort.core꞉> 
-1
-cljs꞉sort.core꞉> 
-[88]
-cljs꞉sort.core꞉> 
-[88]
-cljs꞉sort.core꞉> 
-[4 17 39]
-cljs꞉sort.core꞉> 
-[4 17 39 88]
-cljs꞉sort.core꞉> 
-0
-cljs꞉sort.core꞉> 
-false
-cljs꞉sort.core꞉> 
-false
-cljs꞉sort.core꞉> 
-1
-cljs꞉sort.core꞉> 
-0
-cljs꞉sort.core꞉> 
-#object[AudioBufferSourceNode [object AudioBufferSourceNode]]
-cljs꞉sort.core꞉> 
-0
-cljs꞉sort.core꞉> 
-1
-cljs꞉sort.core꞉> 
-0
-cljs꞉sort.core꞉> 
-1
-cljs꞉sort.core꞉> 
-0
-cljs꞉sort.core꞉> 
-0
-cljs꞉sort.core꞉> 
-1
-cljs꞉sort.core꞉> 
-2
-cljs꞉sort.core꞉> 
-3
-cljs꞉sort.core꞉> 
-true
-cljs꞉sort.core꞉> 
-[31 32 47 50 54 56]
-cljs꞉sort.core꞉> 
-0
-cljs꞉sort.core꞉> 
-0
-cljs꞉sort.core꞉> 
-1
-cljs꞉sort.core꞉> 
-2
-cljs꞉sort.core꞉> 
-3
-cljs꞉sort.core꞉> 
-4
-cljs꞉sort.core꞉> 
-5
-cljs꞉sort.core꞉> 
-6
-cljs꞉sort.core꞉> 
-0
-cljs꞉sort.core꞉> 
-1
-cljs꞉sort.core꞉> 
-2
-cljs꞉sort.core꞉> 
-3
-cljs꞉sort.core꞉> 
-true
-cljs꞉sort.core꞉> 
-0
-cljs꞉sort.core꞉> 
-1
-cljs꞉sort.core꞉> 
-2
-cljs꞉sort.core꞉> 
-3
-cljs꞉sort.core꞉> 
-4
-cljs꞉sort.core꞉> 
-5
-cljs꞉sort.core꞉> 
-6
-cljs꞉sort.core꞉> 
-7
-cljs꞉sort.core꞉> 
-false
-cljs꞉sort.core꞉> 
-8
-cljs꞉sort.core꞉> 
-true
-cljs꞉sort.core꞉> 
-[25 31 32 41 47 50 54 56 71 75]
-cljs꞉sort.core꞉> 
-0
-cljs꞉sort.core꞉> 
-0
-cljs꞉sort.core꞉> 
-:repl/exception!
-; 
-; Execution error (Error) at (<cljs repl>:1).
-No protocol method IDeref.-deref defined for type boolean: false
-cljs꞉sort.core꞉> 
-false
-cljs꞉sort.core꞉> 
-false
-cljs꞉sort.core꞉> 
-false
-cljs꞉sort.core꞉> 
-false
-cljs꞉sort.core꞉> 
-30
-cljs꞉sort.core꞉> 
-{:index nil, :val 9999}
-cljs꞉sort.core꞉> 
-{:index 0, :val 30}
-cljs꞉sort.core꞉> 
-1
-cljs꞉sort.core꞉> 
-2
-cljs꞉sort.core꞉> 
-nil
-cljs꞉sort.core꞉> 
-nil
-cljs꞉sort.core꞉> 
-nil
-cljs꞉sort.core꞉> 
-nil
-cljs꞉sort.core꞉> 
-nil
-cljs꞉sort.core꞉> 
-nil
-cljs꞉sort.core꞉> 
-nil
-cljs꞉sort.core꞉> 
-nil
-cljs꞉sort.core꞉> 
-nil
-cljs꞉sort.core꞉> 
-nil
-cljs꞉sort.core꞉> 
-nil
-cljs꞉sort.core꞉> 
-1
-cljs꞉sort.core꞉> 
-2
-cljs꞉sort.core꞉> 
-3
-cljs꞉sort.core꞉> 
-4
-cljs꞉sort.core꞉> 
-5
-cljs꞉sort.core꞉> 
-6
-cljs꞉sort.core꞉> 
-7
-cljs꞉sort.core꞉> 
-8
-cljs꞉sort.core꞉> 
-9
-cljs꞉sort.core꞉> 
-10
-cljs꞉sort.core꞉> 
-11
-cljs꞉sort.core꞉> 
-12
-cljs꞉sort.core꞉> 
-13
-cljs꞉sort.core꞉> 
-14
-cljs꞉sort.core꞉> 
-15
-cljs꞉sort.core꞉> 
-16
-cljs꞉sort.core꞉> 
-17
-cljs꞉sort.core꞉> 
-18
-cljs꞉sort.core꞉> 
-19
-cljs꞉sort.core꞉> 
-20
-cljs꞉sort.core꞉> 
-21
-cljs꞉sort.core꞉> 
-22
-cljs꞉sort.core꞉> 
-23
-cljs꞉sort.core꞉> 
-24
-cljs꞉sort.core꞉> 
-25
-cljs꞉sort.core꞉> 
-26
-cljs꞉sort.core꞉> 
-27
-cljs꞉sort.core꞉> 
-28
-cljs꞉sort.core꞉> 
-29
-cljs꞉sort.core꞉> 
-30
-cljs꞉sort.core꞉> 
-31
-cljs꞉sort.core꞉> 
-32
-cljs꞉sort.core꞉> 
-33
-cljs꞉sort.core꞉> 
-34
-cljs꞉sort.core꞉> 
-35
-cljs꞉sort.core꞉> 
-36
-cljs꞉sort.core꞉> 
-37
-cljs꞉sort.core꞉> 
-38
-cljs꞉sort.core꞉> 
-39
-cljs꞉sort.core꞉> 
-1
-cljs꞉sort.core꞉> 
-2
-cljs꞉sort.core꞉> 
-3
-cljs꞉sort.core꞉> 
-4
-cljs꞉sort.core꞉> 
-5
-cljs꞉sort.core꞉> 
-6
-cljs꞉sort.core꞉> 
-7
-cljs꞉sort.core꞉> 
-8
-cljs꞉sort.core꞉> 
-9
-cljs꞉sort.core꞉> 
-10
-cljs꞉sort.core꞉> 
-11
-cljs꞉sort.core꞉> 
-12
-cljs꞉sort.core꞉> 
-13
-cljs꞉sort.core꞉> 
-14
-cljs꞉sort.core꞉> 
-15
-cljs꞉sort.core꞉> 
-16
-cljs꞉sort.core꞉> 
-17
-cljs꞉sort.core꞉> 
-18
-cljs꞉sort.core꞉> 
-19
-cljs꞉sort.core꞉> 
-20
-cljs꞉sort.core꞉> 
-21
-cljs꞉sort.core꞉> 
-22
-cljs꞉sort.core꞉> 
-23
-cljs꞉sort.core꞉> 
-24
-cljs꞉sort.core꞉> 
-25
-cljs꞉sort.core꞉> 
-26
-cljs꞉sort.core꞉> 
-27
-cljs꞉sort.core꞉> 
-28
-cljs꞉sort.core꞉> 
-29
-cljs꞉sort.core꞉> 
-30
-cljs꞉sort.core꞉> 
-31
-cljs꞉sort.core꞉> 
-32
-cljs꞉sort.core꞉> 
-33
-cljs꞉sort.core꞉> 
-34
-cljs꞉sort.core꞉> 
-35
-cljs꞉sort.core꞉> 
-36
-cljs꞉sort.core꞉> 
-37
-cljs꞉sort.core꞉> 
-38
-cljs꞉sort.core꞉> 
-39
-cljs꞉sort.core꞉> 
-40
-cljs꞉sort.core꞉> 
-41
-cljs꞉sort.core꞉> 
-42
-cljs꞉sort.core꞉> 
-43
-cljs꞉sort.core꞉> 
-44
-cljs꞉sort.core꞉> 
-45
-cljs꞉sort.core꞉> 
-46
-cljs꞉sort.core꞉> 
-47
-cljs꞉sort.core꞉> 
-48
-cljs꞉sort.core꞉> 
-49
-cljs꞉sort.core꞉> 
-50
-cljs꞉sort.core꞉> 
-51
-cljs꞉sort.core꞉> 
-52
-cljs꞉sort.core꞉> 
-53
-cljs꞉sort.core꞉> 
-54
-cljs꞉sort.core꞉> 
-55
-cljs꞉sort.core꞉> 
-56
-cljs꞉sort.core꞉> 
-57
-cljs꞉sort.core꞉> 
-58
-cljs꞉sort.core꞉> 
-59
-cljs꞉sort.core꞉> 
-60
 cljs꞉sort.core꞉> 
 1
 cljs꞉sort.core꞉> 
@@ -2004,586 +219,497 @@ cljs꞉sort.core꞉> 
 cljs꞉sort.core꞉> 
 95
 cljs꞉sort.core꞉> 
+1
+cljs꞉sort.core꞉> 
+19
+cljs꞉sort.core꞉> 
+20
+cljs꞉sort.core꞉> 
+21
+cljs꞉sort.core꞉> 
+22
+cljs꞉sort.core꞉> 
+23
+cljs꞉sort.core꞉> 
+24
+cljs꞉sort.core꞉> 
+25
+cljs꞉sort.core꞉> 
+26
+cljs꞉sort.core꞉> 
+27
+cljs꞉sort.core꞉> 
+28
+cljs꞉sort.core꞉> 
+29
+cljs꞉sort.core꞉> 
+30
+cljs꞉sort.core꞉> 
+31
+cljs꞉sort.core꞉> 
+32
+cljs꞉sort.core꞉> 
+33
+cljs꞉sort.core꞉> 
+34
+cljs꞉sort.core꞉> 
+35
+cljs꞉sort.core꞉> 
+36
+cljs꞉sort.core꞉> 
+37
+cljs꞉sort.core꞉> 
+38
+cljs꞉sort.core꞉> 
+39
+cljs꞉sort.core꞉> 
+40
+cljs꞉sort.core꞉> 
+41
+cljs꞉sort.core꞉> 
+42
+cljs꞉sort.core꞉> 
+43
+cljs꞉sort.core꞉> 
+44
+cljs꞉sort.core꞉> 
+45
+cljs꞉sort.core꞉> 
+46
+cljs꞉sort.core꞉> 
+47
+cljs꞉sort.core꞉> 
+48
+cljs꞉sort.core꞉> 
+49
+cljs꞉sort.core꞉> 
+50
+cljs꞉sort.core꞉> 
+51
+cljs꞉sort.core꞉> 
+52
+cljs꞉sort.core꞉> 
+53
+cljs꞉sort.core꞉> 
+54
+cljs꞉sort.core꞉> 
+55
+cljs꞉sort.core꞉> 
+56
+cljs꞉sort.core꞉> 
+57
+cljs꞉sort.core꞉> 
+58
+cljs꞉sort.core꞉> 
+1
+cljs꞉sort.core꞉> 
+2
+cljs꞉sort.core꞉> 
+4
+cljs꞉sort.core꞉> 
+1
+cljs꞉sort.core꞉> 
+true
+cljs꞉sort.core꞉> 
+2
+cljs꞉sort.core꞉> 
+3
+cljs꞉sort.core꞉> 
+4
+cljs꞉sort.core꞉> 
+5
+cljs꞉sort.core꞉> 
+6
+cljs꞉sort.core꞉> 
+7
+cljs꞉sort.core꞉> 
+8
+cljs꞉sort.core꞉> 
+9
+cljs꞉sort.core꞉> 
+10
+cljs꞉sort.core꞉> 
+11
+cljs꞉sort.core꞉> 
+12
+cljs꞉sort.core꞉> 
+13
+cljs꞉sort.core꞉> 
+14
+cljs꞉sort.core꞉> 
+15
+cljs꞉sort.core꞉> 
+16
+cljs꞉sort.core꞉> 
+17
+cljs꞉sort.core꞉> 
+18
+cljs꞉sort.core꞉> 
+19
+cljs꞉sort.core꞉> 
+20
+cljs꞉sort.core꞉> 
+21
+cljs꞉sort.core꞉> 
+22
+cljs꞉sort.core꞉> 
+23
+cljs꞉sort.core꞉> 
+24
+cljs꞉sort.core꞉> 
+25
+cljs꞉sort.core꞉> 
+26
+cljs꞉sort.core꞉> 
+27
+cljs꞉sort.core꞉> 
+28
+cljs꞉sort.core꞉> 
+29
+cljs꞉sort.core꞉> 
+30
+cljs꞉sort.core꞉> 
+31
+cljs꞉sort.core꞉> 
+32
+cljs꞉sort.core꞉> 
+33
+cljs꞉sort.core꞉> 
+34
+cljs꞉sort.core꞉> 
+35
+cljs꞉sort.core꞉> 
+36
+cljs꞉sort.core꞉> 
+37
+cljs꞉sort.core꞉> 
+38
+cljs꞉sort.core꞉> 
+39
+cljs꞉sort.core꞉> 
+40
+cljs꞉sort.core꞉> 
+41
+cljs꞉sort.core꞉> 
+42
+cljs꞉sort.core꞉> 
+43
+cljs꞉sort.core꞉> 
+44
+cljs꞉sort.core꞉> 
+45
+cljs꞉sort.core꞉> 
+46
+cljs꞉sort.core꞉> 
+47
+cljs꞉sort.core꞉> 
+48
+cljs꞉sort.core꞉> 
+49
+cljs꞉sort.core꞉> 
+50
+cljs꞉sort.core꞉> 
+51
+cljs꞉sort.core꞉> 
+52
+cljs꞉sort.core꞉> 
+53
+cljs꞉sort.core꞉> 
+54
+cljs꞉sort.core꞉> 
+55
+cljs꞉sort.core꞉> 
+56
+cljs꞉sort.core꞉> 
+57
+cljs꞉sort.core꞉> 
+1
+cljs꞉sort.core꞉> 
+2
+cljs꞉sort.core꞉> 
+3
+cljs꞉sort.core꞉> 
+4
+cljs꞉sort.core꞉> 
+5
+cljs꞉sort.core꞉> 
+6
+cljs꞉sort.core꞉> 
+7
+cljs꞉sort.core꞉> 
+8
+cljs꞉sort.core꞉> 
+9
+cljs꞉sort.core꞉> 
+10
+cljs꞉sort.core꞉> 
+11
+cljs꞉sort.core꞉> 
+12
+cljs꞉sort.core꞉> 
+13
+cljs꞉sort.core꞉> 
+14
+cljs꞉sort.core꞉> 
+15
+cljs꞉sort.core꞉> 
+16
+cljs꞉sort.core꞉> 
+17
+cljs꞉sort.core꞉> 
+18
+cljs꞉sort.core꞉> 
+19
+cljs꞉sort.core꞉> 
+20
+cljs꞉sort.core꞉> 
+21
+cljs꞉sort.core꞉> 
+22
+cljs꞉sort.core꞉> 
+23
+cljs꞉sort.core꞉> 
+24
+cljs꞉sort.core꞉> 
+25
+cljs꞉sort.core꞉> 
+26
+cljs꞉sort.core꞉> 
+27
+cljs꞉sort.core꞉> 
+28
+cljs꞉sort.core꞉> 
+29
+cljs꞉sort.core꞉> 
+30
+cljs꞉sort.core꞉> 
+31
+cljs꞉sort.core꞉> 
+32
+cljs꞉sort.core꞉> 
+33
+cljs꞉sort.core꞉> 
+34
+cljs꞉sort.core꞉> 
+35
+cljs꞉sort.core꞉> 
+36
+cljs꞉sort.core꞉> 
+37
+cljs꞉sort.core꞉> 
+38
+cljs꞉sort.core꞉> 
+39
+cljs꞉sort.core꞉> 
+40
+cljs꞉sort.core꞉> 
+41
+cljs꞉sort.core꞉> 
+42
+cljs꞉sort.core꞉> 
+43
+cljs꞉sort.core꞉> 
+44
+cljs꞉sort.core꞉> 
+45
+cljs꞉sort.core꞉> 
+46
+cljs꞉sort.core꞉> 
+47
+cljs꞉sort.core꞉> 
+48
+cljs꞉sort.core꞉> 
+49
+cljs꞉sort.core꞉> 
+50
+cljs꞉sort.core꞉> 
+51
+cljs꞉sort.core꞉> 
+52
+cljs꞉sort.core꞉> 
+53
+cljs꞉sort.core꞉> 
+54
+cljs꞉sort.core꞉> 
+55
+cljs꞉sort.core꞉> 
+56
+cljs꞉sort.core꞉> 
+1
+cljs꞉sort.core꞉> 
+52
+cljs꞉sort.core꞉> 
+53
+cljs꞉sort.core꞉> 
+54
+cljs꞉sort.core꞉> 
+55
+cljs꞉sort.core꞉> 
+56
+cljs꞉sort.core꞉> 
+57
+cljs꞉sort.core꞉> 
+58
+cljs꞉sort.core꞉> 
+59
+cljs꞉sort.core꞉> 
+60
+cljs꞉sort.core꞉> 
+61
+cljs꞉sort.core꞉> 
+1
+cljs꞉sort.core꞉> 
+2
+cljs꞉sort.core꞉> 
+3
+cljs꞉sort.core꞉> 
 false
 cljs꞉sort.core꞉> 
-96
-cljs꞉sort.core꞉> 
-95
-cljs꞉sort.core꞉> 
-[51
- 65
- 44
- 48
- 13
- 57
- 65
- 13
- 88
- 38
- 33
- 61
- 20
- 7
- 10
- 37
- 62
- 44
- 21
- 58
- 88
- 7
- 72
- 96
- 34
- 29
- 15
- 51
- 93
- 17
- 62
- 65
- 54
- 7
- 87
- 75
- 72
- 87
- 90
- 6
- 16
- 24
- 90
- 43
- 69
- 31
- 97
- 24
- 21
- 6
- ...]
-cljs꞉sort.core꞉> 
-96
-cljs꞉sort.core꞉> 
-97
-cljs꞉sort.core꞉> 
-1
-cljs꞉sort.core꞉> 
-2
-cljs꞉sort.core꞉> 
-3
-cljs꞉sort.core꞉> 
-4
-cljs꞉sort.core꞉> 
-5
-cljs꞉sort.core꞉> 
-6
-cljs꞉sort.core꞉> 
-7
-cljs꞉sort.core꞉> 
-8
-cljs꞉sort.core꞉> 
-9
-cljs꞉sort.core꞉> 
-10
-cljs꞉sort.core꞉> 
-11
-cljs꞉sort.core꞉> 
-12
-13
-14
-cljs꞉sort.core꞉> 
-cljs꞉sort.core꞉> 
-cljs꞉sort.core꞉> 
-15
-16
-cljs꞉sort.core꞉> 
-cljs꞉sort.core꞉> 
-17
-18
-19
-21
-20
-22
-23
-cljs꞉sort.core꞉> 
-cljs꞉sort.core꞉> 
-cljs꞉sort.core꞉> 
-cljs꞉sort.core꞉> 
-cljs꞉sort.core꞉> 
-cljs꞉sort.core꞉> 
-cljs꞉sort.core꞉> 
-24
-25
-26
-27
-28
-29
-30
-31
-33
-32
-34
-35
-36
-37
-cljs꞉sort.core꞉> 
-cljs꞉sort.core꞉> 
-cljs꞉sort.core꞉> 
-cljs꞉sort.core꞉> 
-cljs꞉sort.core꞉> 
-cljs꞉sort.core꞉> 
-cljs꞉sort.core꞉> 
-cljs꞉sort.core꞉> 
-cljs꞉sort.core꞉> 
-cljs꞉sort.core꞉> 
-cljs꞉sort.core꞉> 
-cljs꞉sort.core꞉> 
-cljs꞉sort.core꞉> 
-cljs꞉sort.core꞉> 
-38
-39
-41
-40
-42
-43
-44
-45
-46
-47
-48
-49
-50
-51
-52
-53
-54
-55
-57
-56
-58
-59
-60
-61
-62
-63
-cljs꞉sort.core꞉> 
-cljs꞉sort.core꞉> 
-cljs꞉sort.core꞉> 
-cljs꞉sort.core꞉> 
-cljs꞉sort.core꞉> 
-cljs꞉sort.core꞉> 
-cljs꞉sort.core꞉> 
-cljs꞉sort.core꞉> 
-cljs꞉sort.core꞉> 
-cljs꞉sort.core꞉> 
-cljs꞉sort.core꞉> 
-cljs꞉sort.core꞉> 
-cljs꞉sort.core꞉> 
-cljs꞉sort.core꞉> 
-cljs꞉sort.core꞉> 
-cljs꞉sort.core꞉> 
-cljs꞉sort.core꞉> 
-cljs꞉sort.core꞉> 
-cljs꞉sort.core꞉> 
-cljs꞉sort.core꞉> 
-cljs꞉sort.core꞉> 
-cljs꞉sort.core꞉> 
-cljs꞉sort.core꞉> 
-cljs꞉sort.core꞉> 
-cljs꞉sort.core꞉> 
-cljs꞉sort.core꞉> 
-64
-65
-66
-67
-68
-69
-70
-71
-72
-73
-75
-74
-76
-77
-78
-79
-80
-81
-83
-82
-84
-85
-87
-89
-88
-90
-91
-92
-86
-93
-95
-94
-cljs꞉sort.core꞉> 
-cljs꞉sort.core꞉> 
-cljs꞉sort.core꞉> 
-cljs꞉sort.core꞉> 
-cljs꞉sort.core꞉> 
-cljs꞉sort.core꞉> 
-cljs꞉sort.core꞉> 
-cljs꞉sort.core꞉> 
-cljs꞉sort.core꞉> 
-cljs꞉sort.core꞉> 
-cljs꞉sort.core꞉> 
-cljs꞉sort.core꞉> 
-cljs꞉sort.core꞉> 
-cljs꞉sort.core꞉> 
-cljs꞉sort.core꞉> 
-cljs꞉sort.core꞉> 
-cljs꞉sort.core꞉> 
-cljs꞉sort.core꞉> 
-cljs꞉sort.core꞉> 
-cljs꞉sort.core꞉> 
-cljs꞉sort.core꞉> 
-cljs꞉sort.core꞉> 
-cljs꞉sort.core꞉> 
-cljs꞉sort.core꞉> 
-cljs꞉sort.core꞉> 
-cljs꞉sort.core꞉> 
-cljs꞉sort.core꞉> 
-cljs꞉sort.core꞉> 
-cljs꞉sort.core꞉> 
-cljs꞉sort.core꞉> 
-cljs꞉sort.core꞉> 
-cljs꞉sort.core꞉> 
-{:index nil, :val 99999}
-cljs꞉sort.core꞉> 
-1
-cljs꞉sort.core꞉> 
-2
-cljs꞉sort.core꞉> 
-3
-cljs꞉sort.core꞉> 
-4
-cljs꞉sort.core꞉> 
-5
-cljs꞉sort.core꞉> 
-6
-cljs꞉sort.core꞉> 
-7
-cljs꞉sort.core꞉> 
-8
-cljs꞉sort.core꞉> 
-9
-cljs꞉sort.core꞉> 
-10
-cljs꞉sort.core꞉> 
-11
-cljs꞉sort.core꞉> 
-12
-cljs꞉sort.core꞉> 
-13
-cljs꞉sort.core꞉> 
-14
-cljs꞉sort.core꞉> 
-15
-cljs꞉sort.core꞉> 
-16
-cljs꞉sort.core꞉> 
-17
-cljs꞉sort.core꞉> 
-18
-cljs꞉sort.core꞉> 
-19
-cljs꞉sort.core꞉> 
-20
-cljs꞉sort.core꞉> 
-21
-cljs꞉sort.core꞉> 
-22
-cljs꞉sort.core꞉> 
-23
-cljs꞉sort.core꞉> 
-24
-cljs꞉sort.core꞉> 
-25
-cljs꞉sort.core꞉> 
-26
-cljs꞉sort.core꞉> 
-27
-cljs꞉sort.core꞉> 
-28
-cljs꞉sort.core꞉> 
-29
-cljs꞉sort.core꞉> 
-30
-cljs꞉sort.core꞉> 
-31
-cljs꞉sort.core꞉> 
-32
-cljs꞉sort.core꞉> 
-33
-cljs꞉sort.core꞉> 
-34
-cljs꞉sort.core꞉> 
-35
-cljs꞉sort.core꞉> 
-36
-cljs꞉sort.core꞉> 
-37
-cljs꞉sort.core꞉> 
-38
-cljs꞉sort.core꞉> 
-39
-cljs꞉sort.core꞉> 
-40
-cljs꞉sort.core꞉> 
-41
-cljs꞉sort.core꞉> 
-42
-cljs꞉sort.core꞉> 
-43
-cljs꞉sort.core꞉> 
-44
-cljs꞉sort.core꞉> 
-45
-cljs꞉sort.core꞉> 
-46
-cljs꞉sort.core꞉> 
-47
-cljs꞉sort.core꞉> 
-48
-cljs꞉sort.core꞉> 
-49
-cljs꞉sort.core꞉> 
-50
-cljs꞉sort.core꞉> 
-51
-cljs꞉sort.core꞉> 
-52
-cljs꞉sort.core꞉> 
-53
-cljs꞉sort.core꞉> 
-54
-cljs꞉sort.core꞉> 
-55
-cljs꞉sort.core꞉> 
-56
-cljs꞉sort.core꞉> 
-57
-cljs꞉sort.core꞉> 
-58
-cljs꞉sort.core꞉> 
-59
-cljs꞉sort.core꞉> 
-60
-cljs꞉sort.core꞉> 
-61
-cljs꞉sort.core꞉> 
-62
-cljs꞉sort.core꞉> 
-63
-cljs꞉sort.core꞉> 
-64
-cljs꞉sort.core꞉> 
-65
-cljs꞉sort.core꞉> 
-66
-cljs꞉sort.core꞉> 
-67
-cljs꞉sort.core꞉> 
-68
-cljs꞉sort.core꞉> 
-69
-cljs꞉sort.core꞉> 
-70
-cljs꞉sort.core꞉> 
-71
-cljs꞉sort.core꞉> 
-72
-cljs꞉sort.core꞉> 
-73
-cljs꞉sort.core꞉> 
-74
-cljs꞉sort.core꞉> 
-75
-cljs꞉sort.core꞉> 
-76
-cljs꞉sort.core꞉> 
-77
-cljs꞉sort.core꞉> 
-78
-cljs꞉sort.core꞉> 
-79
-cljs꞉sort.core꞉> 
-80
-cljs꞉sort.core꞉> 
-81
-cljs꞉sort.core꞉> 
-82
-cljs꞉sort.core꞉> 
-83
-cljs꞉sort.core꞉> 
-84
-cljs꞉sort.core꞉> 
-85
-cljs꞉sort.core꞉> 
-86
-cljs꞉sort.core꞉> 
-87
-cljs꞉sort.core꞉> 
-88
-cljs꞉sort.core꞉> 
-89
-cljs꞉sort.core꞉> 
-90
-cljs꞉sort.core꞉> 
-91
-cljs꞉sort.core꞉> 
-92
-cljs꞉sort.core꞉> 
-93
-cljs꞉sort.core꞉> 
-94
-cljs꞉sort.core꞉> 
-{:index nil, :val 99999}
-cljs꞉sort.core꞉> 
-1
-cljs꞉sort.core꞉> 
-2
-cljs꞉sort.core꞉> 
-3
-cljs꞉sort.core꞉> 
-4
-cljs꞉sort.core꞉> 
-5
-cljs꞉sort.core꞉> 
-6
-cljs꞉sort.core꞉> 
-7
-cljs꞉sort.core꞉> 
-8
-cljs꞉sort.core꞉> 
-9
-cljs꞉sort.core꞉> 
-10
-cljs꞉sort.core꞉> 
-11
-cljs꞉sort.core꞉> 
-2
-cljs꞉sort.core꞉> 
-4
-cljs꞉sort.core꞉> 
-6
-cljs꞉sort.core꞉> 
-8
-cljs꞉sort.core꞉> 
-10
-cljs꞉sort.core꞉> 
-12
-cljs꞉sort.core꞉> 
-14
-cljs꞉sort.core꞉> 
-16
-cljs꞉sort.core꞉> 
-92
-cljs꞉sort.core꞉> 
-93
-cljs꞉sort.core꞉> 
-94
-cljs꞉sort.core꞉> 
-95
-cljs꞉sort.core꞉> 
-{:index nil, :val 99999}
-cljs꞉sort.core꞉> 
-91
-cljs꞉sort.core꞉> 
-92
-cljs꞉sort.core꞉> 
-93
-cljs꞉sort.core꞉> 
-94
-cljs꞉sort.core꞉> 
-95
-cljs꞉sort.core꞉> 
-{:index nil, :val 99999}
-cljs꞉sort.core꞉> 
-92
-cljs꞉sort.core꞉> 
-93
-cljs꞉sort.core꞉> 
-94
-cljs꞉sort.core꞉> 
-95
-cljs꞉sort.core꞉> 
-{:index nil, :val 99999}
-cljs꞉sort.core꞉> 
-93
-cljs꞉sort.core꞉> 
-94
-cljs꞉sort.core꞉> 
-95
-cljs꞉sort.core꞉> 
-{:index nil, :val 99999}
-cljs꞉sort.core꞉> 
-94
-cljs꞉sort.core꞉> 
-95
-cljs꞉sort.core꞉> 
-{:index nil, :val 99999}
-cljs꞉sort.core꞉> 
-95
-cljs꞉sort.core꞉> 
-{:index nil, :val 99999}
-cljs꞉sort.core꞉> 
-:repl/exception!
-; 
-; Execution error (Error) at (<cljs repl>:1).
-Assert failed: (number? n)
+true
 cljs꞉sort.core꞉> 
 nil
+; ------ WARNING - :undeclared-var -----------------------------------------------
+;  Resource: <eval>:1:4
+ Use of undeclared Var sort.core/item2
+--------------------------------------------------------------------------------
+
+; ------ WARNING - :undeclared-var -----------------------------------------------
+;  Resource: <eval>:1:10
+ Use of undeclared Var sort.core/item1
+--------------------------------------------------------------------------------
+
 cljs꞉sort.core꞉> 
-93
+true
 cljs꞉sort.core꞉> 
-false
+1
+cljs꞉sort.core꞉> 
+true
+cljs꞉sort.core꞉> 
+1
 cljs꞉sort.core꞉> 
 2
 cljs꞉sort.core꞉> 
+3
+cljs꞉sort.core꞉> 
 4
 cljs꞉sort.core꞉> 
-94
+5
 cljs꞉sort.core꞉> 
-95
+6
 cljs꞉sort.core꞉> 
-{:index nil, :val 99999}
-cljs꞉sort.core꞉> 
-94
-cljs꞉sort.core꞉> 
-95
-cljs꞉sort.core꞉> 
-{:index nil, :val 99999}
-cljs꞉sort.core꞉> 
-1
+7
 cljs꞉sort.core꞉> 
 false
 cljs꞉sort.core꞉> 
-true
+8
 cljs꞉sort.core꞉> 
-true
+9
 cljs꞉sort.core꞉> 
-1
+10
 cljs꞉sort.core꞉> 
-true
+11
 cljs꞉sort.core꞉> 
-{:index 1, :val 0}
+12
 cljs꞉sort.core꞉> 
-{:index 0, :val 0}
+13
 cljs꞉sort.core꞉> 
-true
+14
 cljs꞉sort.core꞉> 
-1
+15
 cljs꞉sort.core꞉> 
-{:index 0, :val 99999}
+16
+cljs꞉sort.core꞉> 
+17
+cljs꞉sort.core꞉> 
+18
+cljs꞉sort.core꞉> 
+19
+cljs꞉sort.core꞉> 
+20
+cljs꞉sort.core꞉> 
+21
+cljs꞉sort.core꞉> 
+22
+cljs꞉sort.core꞉> 
+23
+cljs꞉sort.core꞉> 
+24
+cljs꞉sort.core꞉> 
+25
+cljs꞉sort.core꞉> 
+26
+cljs꞉sort.core꞉> 
+27
+cljs꞉sort.core꞉> 
+28
+cljs꞉sort.core꞉> 
+29
+cljs꞉sort.core꞉> 
+30
+cljs꞉sort.core꞉> 
+31
+cljs꞉sort.core꞉> 
+32
+cljs꞉sort.core꞉> 
+33
+cljs꞉sort.core꞉> 
+34
+cljs꞉sort.core꞉> 
+35
+cljs꞉sort.core꞉> 
+36
+cljs꞉sort.core꞉> 
+37
+cljs꞉sort.core꞉> 
+38
+cljs꞉sort.core꞉> 
+39
+cljs꞉sort.core꞉> 
+40
+cljs꞉sort.core꞉> 
+41
+cljs꞉sort.core꞉> 
+42
+cljs꞉sort.core꞉> 
+43
+cljs꞉sort.core꞉> 
+44
+cljs꞉sort.core꞉> 
+45
+cljs꞉sort.core꞉> 
+46
+cljs꞉sort.core꞉> 
+47
+cljs꞉sort.core꞉> 
+48
+cljs꞉sort.core꞉> 
+49
+cljs꞉sort.core꞉> 
+50
+cljs꞉sort.core꞉> 
+51
+cljs꞉sort.core꞉> 
+52
+cljs꞉sort.core꞉> 
+53
+cljs꞉sort.core꞉> 
+54
+cljs꞉sort.core꞉> 
+55
+cljs꞉sort.core꞉> 
+56
+cljs꞉sort.core꞉> 
+57
+cljs꞉sort.core꞉> 
+58
+cljs꞉sort.core꞉> 
+59
+cljs꞉sort.core꞉> 
+60
+cljs꞉sort.core꞉> 
+61
+cljs꞉sort.core꞉> 
+62
 cljs꞉sort.core꞉> 
 63
 cljs꞉sort.core꞉> 
@@ -2651,9 +777,85 @@ cljs꞉sort.core꞉> 
 cljs꞉sort.core꞉> 
 95
 cljs꞉sort.core꞉> 
-96
+1
 cljs꞉sort.core꞉> 
-{:index 56, :val 99}
+1
+cljs꞉sort.core꞉> 
+2
+cljs꞉sort.core꞉> 
+3
+cljs꞉sort.core꞉> 
+4
+cljs꞉sort.core꞉> 
+5
+cljs꞉sort.core꞉> 
+6
+cljs꞉sort.core꞉> 
+7
+cljs꞉sort.core꞉> 
+8
+cljs꞉sort.core꞉> 
+9
+cljs꞉sort.core꞉> 
+10
+cljs꞉sort.core꞉> 
+11
+cljs꞉sort.core꞉> 
+12
+cljs꞉sort.core꞉> 
+13
+cljs꞉sort.core꞉> 
+14
+cljs꞉sort.core꞉> 
+15
+cljs꞉sort.core꞉> 
+16
+cljs꞉sort.core꞉> 
+17
+cljs꞉sort.core꞉> 
+18
+cljs꞉sort.core꞉> 
+19
+cljs꞉sort.core꞉> 
+20
+cljs꞉sort.core꞉> 
+21
+cljs꞉sort.core꞉> 
+22
+cljs꞉sort.core꞉> 
+23
+cljs꞉sort.core꞉> 
+24
+cljs꞉sort.core꞉> 
+25
+cljs꞉sort.core꞉> 
+26
+cljs꞉sort.core꞉> 
+27
+cljs꞉sort.core꞉> 
+28
+cljs꞉sort.core꞉> 
+29
+cljs꞉sort.core꞉> 
+30
+cljs꞉sort.core꞉> 
+31
+cljs꞉sort.core꞉> 
+32
+cljs꞉sort.core꞉> 
+33
+cljs꞉sort.core꞉> 
+34
+cljs꞉sort.core꞉> 
+35
+cljs꞉sort.core꞉> 
+36
+cljs꞉sort.core꞉> 
+37
+cljs꞉sort.core꞉> 
+38
+cljs꞉sort.core꞉> 
+39
 cljs꞉sort.core꞉> 
 40
 cljs꞉sort.core꞉> 
@@ -2672,4 +874,290 @@ cljs꞉sort.core꞉> 
 47
 cljs꞉sort.core꞉> 
 48
+cljs꞉sort.core꞉> 
+49
+cljs꞉sort.core꞉> 
+50
+cljs꞉sort.core꞉> 
+51
+cljs꞉sort.core꞉> 
+52
+cljs꞉sort.core꞉> 
+53
+cljs꞉sort.core꞉> 
+54
+cljs꞉sort.core꞉> 
+55
+cljs꞉sort.core꞉> 
+56
+cljs꞉sort.core꞉> 
+57
+cljs꞉sort.core꞉> 
+58
+cljs꞉sort.core꞉> 
+59
+cljs꞉sort.core꞉> 
+60
+cljs꞉sort.core꞉> 
+61
+cljs꞉sort.core꞉> 
+62
+cljs꞉sort.core꞉> 
+63
+cljs꞉sort.core꞉> 
+64
+cljs꞉sort.core꞉> 
+65
+cljs꞉sort.core꞉> 
+66
+cljs꞉sort.core꞉> 
+67
+cljs꞉sort.core꞉> 
+68
+cljs꞉sort.core꞉> 
+69
+cljs꞉sort.core꞉> 
+70
+cljs꞉sort.core꞉> 
+71
+cljs꞉sort.core꞉> 
+72
+cljs꞉sort.core꞉> 
+73
+cljs꞉sort.core꞉> 
+74
+cljs꞉sort.core꞉> 
+75
+cljs꞉sort.core꞉> 
+76
+cljs꞉sort.core꞉> 
+77
+cljs꞉sort.core꞉> 
+78
+cljs꞉sort.core꞉> 
+79
+cljs꞉sort.core꞉> 
+80
+cljs꞉sort.core꞉> 
+81
+cljs꞉sort.core꞉> 
+82
+cljs꞉sort.core꞉> 
+83
+cljs꞉sort.core꞉> 
+84
+cljs꞉sort.core꞉> 
+85
+cljs꞉sort.core꞉> 
+86
+cljs꞉sort.core꞉> 
+87
+cljs꞉sort.core꞉> 
+88
+cljs꞉sort.core꞉> 
+89
+cljs꞉sort.core꞉> 
+90
+cljs꞉sort.core꞉> 
+91
+cljs꞉sort.core꞉> 
+92
+cljs꞉sort.core꞉> 
+93
+cljs꞉sort.core꞉> 
+94
+cljs꞉sort.core꞉> 
+95
+cljs꞉sort.core꞉> 
+1
+cljs꞉sort.core꞉> 
+2
+cljs꞉sort.core꞉> 
+3
+cljs꞉sort.core꞉> 
+4
+cljs꞉sort.core꞉> 
+5
+cljs꞉sort.core꞉> 
+6
+cljs꞉sort.core꞉> 
+7
+cljs꞉sort.core꞉> 
+8
+cljs꞉sort.core꞉> 
+9
+cljs꞉sort.core꞉> 
+10
+cljs꞉sort.core꞉> 
+11
+cljs꞉sort.core꞉> 
+12
+cljs꞉sort.core꞉> 
+13
+cljs꞉sort.core꞉> 
+14
+cljs꞉sort.core꞉> 
+15
+cljs꞉sort.core꞉> 
+16
+cljs꞉sort.core꞉> 
+17
+cljs꞉sort.core꞉> 
+18
+cljs꞉sort.core꞉> 
+19
+cljs꞉sort.core꞉> 
+20
+cljs꞉sort.core꞉> 
+21
+cljs꞉sort.core꞉> 
+22
+cljs꞉sort.core꞉> 
+23
+cljs꞉sort.core꞉> 
+24
+cljs꞉sort.core꞉> 
+25
+cljs꞉sort.core꞉> 
+26
+cljs꞉sort.core꞉> 
+27
+cljs꞉sort.core꞉> 
+28
+cljs꞉sort.core꞉> 
+29
+cljs꞉sort.core꞉> 
+30
+cljs꞉sort.core꞉> 
+31
+cljs꞉sort.core꞉> 
+32
+cljs꞉sort.core꞉> 
+33
+cljs꞉sort.core꞉> 
+34
+cljs꞉sort.core꞉> 
+35
+cljs꞉sort.core꞉> 
+36
+cljs꞉sort.core꞉> 
+37
+cljs꞉sort.core꞉> 
+38
+cljs꞉sort.core꞉> 
+39
+cljs꞉sort.core꞉> 
+40
+cljs꞉sort.core꞉> 
+41
+cljs꞉sort.core꞉> 
+42
+cljs꞉sort.core꞉> 
+43
+cljs꞉sort.core꞉> 
+44
+cljs꞉sort.core꞉> 
+45
+cljs꞉sort.core꞉> 
+46
+cljs꞉sort.core꞉> 
+47
+cljs꞉sort.core꞉> 
+48
+cljs꞉sort.core꞉> 
+49
+cljs꞉sort.core꞉> 
+50
+cljs꞉sort.core꞉> 
+51
+cljs꞉sort.core꞉> 
+52
+cljs꞉sort.core꞉> 
+53
+cljs꞉sort.core꞉> 
+54
+cljs꞉sort.core꞉> 
+55
+cljs꞉sort.core꞉> 
+56
+cljs꞉sort.core꞉> 
+57
+cljs꞉sort.core꞉> 
+58
+cljs꞉sort.core꞉> 
+59
+cljs꞉sort.core꞉> 
+60
+cljs꞉sort.core꞉> 
+61
+cljs꞉sort.core꞉> 
+62
+cljs꞉sort.core꞉> 
+63
+cljs꞉sort.core꞉> 
+64
+cljs꞉sort.core꞉> 
+65
+cljs꞉sort.core꞉> 
+66
+cljs꞉sort.core꞉> 
+67
+cljs꞉sort.core꞉> 
+68
+cljs꞉sort.core꞉> 
+69
+cljs꞉sort.core꞉> 
+70
+cljs꞉sort.core꞉> 
+71
+cljs꞉sort.core꞉> 
+72
+cljs꞉sort.core꞉> 
+73
+cljs꞉sort.core꞉> 
+74
+cljs꞉sort.core꞉> 
+75
+cljs꞉sort.core꞉> 
+76
+cljs꞉sort.core꞉> 
+77
+cljs꞉sort.core꞉> 
+78
+cljs꞉sort.core꞉> 
+79
+cljs꞉sort.core꞉> 
+80
+cljs꞉sort.core꞉> 
+81
+cljs꞉sort.core꞉> 
+82
+cljs꞉sort.core꞉> 
+83
+cljs꞉sort.core꞉> 
+84
+cljs꞉sort.core꞉> 
+85
+cljs꞉sort.core꞉> 
+86
+cljs꞉sort.core꞉> 
+87
+cljs꞉sort.core꞉> 
+88
+cljs꞉sort.core꞉> 
+89
+cljs꞉sort.core꞉> 
+90
+cljs꞉sort.core꞉> 
+91
+cljs꞉sort.core꞉> 
+92
+cljs꞉sort.core꞉> 
+93
+cljs꞉sort.core꞉> 
+94
+cljs꞉sort.core꞉> 
+1
+cljs꞉sort.core꞉> 
+2
 cljs꞉sort.core꞉> 

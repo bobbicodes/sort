@@ -50,6 +50,8 @@
 (defonce insert-ptr (r/atom 0))
 (defonce select-ptr (r/atom 0))
 (defonce select-min (r/atom {:val 999999 :index nil}))
+(defonce bubble-max (r/atom 95))
+(defonce bubble-down (r/atom 9999))
 
 (defn bars [items]
   (let [bars items
@@ -63,6 +65,7 @@
                      (- 50 (/ (nth bars bar) 2.0))
                      (cond
                        (= bar @hl) "red"
+                       (< @bubble-down bar) "magenta"
                        (< bar (count @sorted)) "magenta"
                        :else "yellow"))))))
 
@@ -120,11 +123,11 @@
                 (swap! elements #(vec (rest %)))
                 (reset! insert-ptr 0)
                 (reset! highlighted 0)
-                (audio/play-note! (first @elements) (.-currentTime *context*) 15))
+                (audio/play-note! (first @elements) (.-currentTime *context*) 14))
             :else
             (do (swap! insert-ptr inc)
                 (swap! highlighted inc)
-                (audio/play-note! @insert-ptr (.-currentTime *context*) 4)))
+                #_(audio/play-note! @insert-ptr (.-currentTime *context*) 14)))
       (do
         (stop-timer! @timer-id)
         (sweep-notes! @sorted))))
@@ -177,24 +180,42 @@
   (select!)
   )
 
-(defn exchange [v]
-  (assoc v (inc @pointer) (v @pointer) @pointer (v (inc @pointer))))
-
 (defn bubble! []
   (let [item1 (get @elements @pointer)
         item2 (get @elements (inc @pointer))]
-    (when (= @pointer 95)
-      (reset! pointer 0))
     (if (not= @elements (sort @elements))
       (do
         (when (< item2 item1)
-          (swap! elements #(exchange %))
+          (swap! elements #(assoc % 
+                                  (inc @pointer) (% @pointer) 
+                                  @pointer (% (inc @pointer))))
+          (reset! bubble-max @pointer)
           (audio/play-note! @pointer (.-currentTime *context*) 4))
-        (reset! highlighted (inc @pointer))
-        (swap! pointer inc))
+        (swap! pointer inc)
+        (reset! highlighted @pointer)
+        )
       (do
         (stop-timer! @timer-id)
-        (sweep-notes! @elements)))))
+        (sweep-notes! @elements)))
+    (when (or (= @pointer 95) (= @pointer @bubble-down))
+      (reset! pointer 0)
+      (reset! bubble-down @bubble-max)
+      (audio/play-note! item1 (.-currentTime *context*) 15))))
+
+(comment
+   (let [item1 (get @elements @pointer)
+        item2 (get @elements (inc @pointer))]
+     (or (= @pointer 95) (= @pointer @bubble-down))
+(not= @elements (sort @elements))
+(< item2 item1)
+     )
+  
+  @pointer
+  (<
+   (get @elements @pointer)
+   (get @elements (inc @pointer)))
+  (bubble!)
+  )
 
 (defn parent [node]
   (int (/ (dec node) 2)))
@@ -287,7 +308,7 @@
 (defn start-timer! []
   (when (= @timer :off)
     (reset! timer-id (cond (= @algo "Selection sort") (js/setInterval select! 1)
-                           (= @algo "Insertion sort") (js/setInterval insert! 30)
+                           (= @algo "Insertion sort") (js/setInterval insert! 5)
                            (= @algo "Bubble sort") (js/setInterval bubble! 5)
                            (= @algo "Heapsort") (js/setInterval heap! 200)))
     (reset! timer :on)))
@@ -313,7 +334,9 @@
                         (reset! insert-ptr 0)
                         (reset! highlighted 0)
                         (reset! select-ptr 0)
-                        (reset! select-min {:index nil :val 99999}))]]
+                        (reset! select-min {:index nil :val 99999})
+                        (reset! bubble-max 95)
+                        (reset! bubble-down 999))]]
      [:div
       [:button
        {:on-click
@@ -343,6 +366,12 @@
      (when (= @algo "Heapsort")
        [:p (str "Heap: " @heap)])
      [:p (str "Sorted: " @sorted)]
+     [:p (str "Pointer: " @pointer)]
+     [:p (str "highlighted: " @highlighted)]
+     [:p (str "Item1: " (get @elements @pointer))]
+     [:p (str "Item2: " (get @elements (inc @pointer)))]
+     [:p (str "Bubble max: " @bubble-max)]
+          [:p (str "Bubble down: " @bubble-down)]
      ;[:p (str "Select pointer: " @select-ptr)]
      ;[:p (str "Select min: " @select-min)]
      #_(cond (= @algo "Selection sort")

@@ -48,7 +48,7 @@
   (go-loop [result {}
             sounds (range 1 16)]
     (if-not (nil? (first sounds))
-      (let [sound (first sounds)
+      (let [sound (first sounds)             ;; for gh-pages add /sort/public
             decoded-buffer (<! (get-and-decode {:url (str "/sort/public/audio/" sound ".mp3")
                                                 :sound sound}))]
         (prn sound)
