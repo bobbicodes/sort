@@ -314,7 +314,7 @@
   (heap!)
   )
 
-(defonce step-delay (r/atom 20))
+(defonce step-delay (r/atom 15))
 
 (defn start-timer! []
   (when (= @timer :off)
