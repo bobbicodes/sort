@@ -1,4 +1,4 @@
-# porkostomus/sort
+# BTowersCoding/sort
 
 ![Sorting visualization](sort.png)
 
