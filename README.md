@@ -1,4 +1,4 @@
-# BTowersCoding/sort
+# bobbicodes/sort
 
 ![Sorting visualization](sort.png)
 
@@ -8,7 +8,7 @@
 
 I've made a certain effort to render these algorithms _musically_, i.e. the notes are restricted to the blues scale, and I attempt to create an instrumental counterpoint that reflects the sorting mechanics. I tried to strike a balance between it seeming "generative" enough as well as what I'd subjectively consider "pleasing", "interesting", and perhaps once in awhile "a little unexpected".
 
-[Try it!](https://BTowersCoding.github.io/sort/)
+[Try it!](https://bobbicodes.github.io/sort/)
 
 ### Development mode
 ```
