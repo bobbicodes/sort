@@ -16,3 +16,4 @@ pom.xml.asc
 /.env
 .shadow-cljs
 .calva
+node_modules/

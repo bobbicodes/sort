@@ -3,7 +3,9 @@
    [reagent.core :as r]
    [reagent.dom :as d]
    [sort.audio :as audio :refer [*context*]]
-   [sort.heap :as heap]))
+   [sort.heap :as heap]
+   [sort.selection :as selection :refer [num-items highlighted sorted elements timer-id select! select-ptr select-min]]
+   [sort.insertion :as insertion]))
 
 ;; -------------------------
 ;; Views
@@ -50,16 +52,13 @@
      :stroke       "#00d0ff"
      :stroke-width 0.05}]])
 
-(defonce num-items (r/atom 96))
-(defonce elements (r/atom (vec (repeatedly @num-items #(rand-int 100)))))
-(defonce sorted (r/atom []))
 (defonce algo (r/atom "Insertion sort"))
-(defonce highlighted (r/atom nil))
+
 (defonce pointer (r/atom 0))
 (defonce heap (r/atom []))
 (defonce insert-ptr (r/atom 0))
-(defonce select-ptr (r/atom 0))
-(defonce select-min (r/atom {:val 999999 :index nil}))
+
+
 (defonce bubble-max (r/atom (dec @num-items)))
 (defonce bubble-down (r/atom 9999))
 
@@ -79,10 +78,6 @@
                        (< bar (count @sorted)) "magenta"
                        :else "yellow"))))))
 
-(defn remove-nth
-  [nums n]
-  (into (vec (take n nums)) (drop (+ 1 n) nums)))
-
 (defn render-sort []
   [:svg {:width    "100%"
          :view-box (str "0 0 100 50")}
@@ -98,7 +93,7 @@
           (= @algo "Insertion sort")
           [bars (into (vec  @sorted) @elements)])]])
 
-(def timer-id (atom 0))
+
 
 (def timer (atom :off))
 
@@ -161,34 +156,7 @@
   (< (get @elements @select-ptr) (:val @select-min))
   )
 
-(defn select! []
-  (let [min-val (apply min-key second (map-indexed vector @elements))
-        val (last min-val)
-        idx (first min-val)]
-    (if (seq @elements)
-      (cond
-        (= @select-ptr (count @elements))
-        (do
-          (audio/play-note! (+ (:index @select-min) (count @sorted)) (.-currentTime *context*) 15)
-          (swap! sorted conj (:val @select-min))
-          (swap! elements #(remove-nth % (:index @select-min)))
-          (reset! highlighted (count @sorted))
-          (reset! select-ptr 0)
-          (reset! select-min {:index (count @elements) :val 99999}))
-        :else
-        (do (when (< (get @elements @select-ptr) (:val @select-min))
-              (swap! select-min assoc :index @select-ptr :val (get @elements @select-ptr))
-              (audio/play-note! (get @elements @select-ptr)))
-            (swap! select-ptr inc)
-            (swap! highlighted inc)))
-      (do
-        (stop-timer! @timer-id)
-        (sweep-notes! @sorted)))))
 
-(comment
-  (= (inc @select-ptr) (count @elements))
-  (select!)
-  )
 
 (defn bubble! []
   (let [item1 (get @elements @pointer)
@@ -228,93 +196,10 @@
   (bubble!)
   )
 
-(defn parent [node]
-  (int (/ (dec node) 2)))
-
-(parent 2)
-
-(defn l-child [n]
-  (* n 2))
-
-(defn r-child [n]
-  (inc (* n 2)))
-
-(l-child 2)
-
-(defn swap [coll i j]
-  (assoc coll i (get coll j) j (get coll i)))
-
-(swap (conj @heap (first @elements)) 1 2)
-
-(defn float-up [h i]
-  (if (<= i 0)
-    h ;; terminate at the top
-    (let [parent (nth h (parent i))
-          me (nth h i)]
-      (if (< me parent)
-        (float-up (swap h (parent i) i)  (parent i))
-        h))))
-
-
-(let [h' (conj @heap (first @elements))
-      i (dec (count h'))
-      parent-node (nth h' (parent i))
-      me (nth h' i)]
-  (if (< me parent-node)
-    (swap h' (parent i) i)
-    h'))
-
-(let [h @heap
-      val (first @elements)
-      h' (conj h val)
-      i (dec (count h'))
-      parent-node (nth h' (parent i))
-      me (nth h' i)]
-  (swap h' (parent i) i)
-  ;parent-node
-;(parent i)
-  )
-
-(let [h @heap
-      val (first @elements)
-      h' (conj h val)
-      i (dec (count h'))
-      parent-node (nth h' (parent i))
-      me (nth h' i)]
-(swap h' (parent i) i)
-  )
-
-  
-
-(defn heap-add [h val]
-  (let [h' (conj h val)
-        len (dec (count h'))]
-    (float-up h' len)))
-
-(let [h @heap val (first @elements)
-      h' (conj h val)
-      len (dec (count h'))]
-  (float-up h' len)
-  )
-
 (defn heap! []
   (when (seq @elements)
     (swap! heap conj (first @elements))
     (swap! elements #(vec (rest %)))))
-
-;(nth @heap (parent 2))
-#_(<
- (nth @heap (dec (count @heap)))
- (nth @heap (parent (dec (count @heap)))))
-(count @heap)
-
-;(float-up (conj @heap (first @elements)) (dec (count @heap)))
-
-;(float-up (swap @heap (parent (dec (count @heap))) (dec (count @heap)))  (parent (dec (count @heap))))
-
-(comment
-  (heap!)
-  )
 
 (defonce step-delay (r/atom 15))
 
@@ -338,8 +223,7 @@
        ;[:option {:value "Heapsort"} "Heapsort"]
        [:option {:value "Insertion sort"} "Insertion sort"]
        [:option {:value "Selection sort"} "Selection sort"]
-       [:option {:value "Bubble sort"} "Bubble sort"]
-       ]
+       [:option {:value "Bubble sort"} "Bubble sort"]]
       [button "Reset" (fn []
                         (reset! elements (vec (repeatedly @num-items #(rand-int 100))))
                         (reset! sorted [])
@@ -355,8 +239,7 @@
                                                      (stop-timer! @timer-id))]
       [input "number" " Delay (ms): " @step-delay #(do 
                                                      (reset! step-delay (-> % .-target .-value js/parseInt))
-                                                     (stop-timer! @timer-id))]
-    ]
+                                                     (stop-timer! @timer-id))]]
      [:div
       [:button
        {:on-click
@@ -400,9 +283,6 @@
            [:p (str "Next element: " (first @elements)
                     " at index " (count @sorted)
                     " belongs at position " (count lesser-items))])]))
-
-;; -------------------------
-;; Initialize app
 
 (defn mount-root []
   (d/render [home-page] (.getElementById js/document "app")))
